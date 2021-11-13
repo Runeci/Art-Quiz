@@ -1,0 +1,69 @@
+.artist-category__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-category__header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.artist-category__categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-category__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.artist-card {
+  max-width: 180px;
+  width: 100%;
+  height: 200px;
+  margin: 10px;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.artist-card__question {
+  width: 100%;
+  background-color: white;
+  padding: 0 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.artist-card__img {
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+}
+
+.not-visited {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.artist-card:hover {
+  opacity: 0.5;
+}
+
+.card-btn {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  font-size: 10px;
+  padding: 2px;
+}
