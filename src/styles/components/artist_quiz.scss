@@ -1,0 +1,135 @@
+.artist-quiz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-quiz__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons-category {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.artist-quiz__card {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-quiz__question {
+  margin-bottom: 20px;
+}
+
+.artist-quiz__img {
+  min-width: 360px;
+  max-width: 600px;
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.artist-quiz__answers {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artist-quiz__questions-number {
+  margin-bottom: 20px;
+}
+
+.artist-quiz__answer {
+  min-width: 200px;
+  max-width: 350px;
+  width: 100%;
+  padding: 20px;
+  border: 3px solid $main-color;
+  text-align: center;
+}
+
+.artist-quiz__answer.correct {
+  border: 2px solid green;
+}
+
+.artist-quiz__answer.wrong {
+  border: 2px solid red;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+
+.modal,
+.modal-results {
+  display: block;
+  top: -100%;/* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  padding-top: 100px; /* Расположение коробки */
+  left: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+  background-color: rgba(0,0,0,0.4); /*Черный с непрозрачностью */
+  transition: top 0.8s ease;
+  text-align: center;
+}
+
+
+
+/* Модальное содержание */
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 500px;
+  width: 100%;
+}
+
+.modal-inner-text {
+  margin-bottom: 20px;
+}
+
+.artist-quiz__questions-number {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+
+.artist-quiz__question-number {
+  width: 10px;
+  height: 10px;
+  border: 1px solid $main-color;
+}
+
+.artist-quiz__question-number.correct {
+  border: 1px solid green;
+  background: green;
+}
+
+.artist-quiz__question-number.wrong {
+  border: 1px solid red;
+  background: red;
+}
