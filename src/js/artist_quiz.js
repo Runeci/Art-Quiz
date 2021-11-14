@@ -1,11 +1,9 @@
 import  {createBtnScore, loadJson} from "./artist";
-import {buttonCategoryArtist, buttonCategoryHome, buttonHome, makeVisible, removeClass} from "./main";
-
-
+import {buttonCategoryArtist, buttonCategoryHome, buttonsCategoryHome, makeVisible, removeClass} from "./main";
 export const numberOfQuestions = 10;
 
 loadJson('./assets/json.json').catch(alert).then(data => {
-    let infoArr = data.items;
+    const infoArr = data.items;
     const cardArr = document.querySelectorAll('.artist-card')
     const btnNext = document.querySelector('.artist-quiz__next')
     const quizAnswersContainer = document.querySelector('.artist-quiz__answers')
@@ -27,8 +25,8 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     divideIntoParts(infoArr, arrayParts);
 
     cardArr.forEach((card, index) => {
-        if (localStorage.getItem(`visited ${index}`) === 'true') {
-            createBtnScore(cardArr, index)
+        if (localStorage.getItem(`artist visited ${index}`) === 'true') {
+            createBtnScore(cardArr, index, 'artist')
         }
         card.addEventListener('click', () => {
             currCategoryNum = index;
@@ -46,16 +44,14 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         hideModal(modalNext)
 
         localStorage.setItem(`card artist ${currCategoryNum}`, `${score}`) //set score
+        localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
 
         quizAnswersContainer.classList.remove('disabled')
         numberOfAnsweredQuestions++
-        if (numberOfAnsweredQuestions === numberOfQuestions) {
-            showModal(modalResults)
-            modalResultsScore.innerHTML = `${score} / ${numberOfQuestions}`
-        }
+        showResult(numberOfAnsweredQuestions, modalResults, modalResultsScore, score)
 
-        if (localStorage.getItem(`visited ${currCategoryNum}`) === 'true') {
-            createBtnScore(cardArr, currCategoryNum)
+        if (localStorage.getItem(`artist visited ${currCategoryNum}`) === 'true') {
+            createBtnScore(cardArr, currCategoryNum, 'artist')
         }
     })
 
@@ -70,37 +66,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         }
     })
 
-
-    btnResult.addEventListener('click', () => {
-        makeVisible('artist-category')
-        setDefaultValues()
-    })
-
-    buttonCategoryArtist.addEventListener('click', () => {
-        if (arrWithResults.length < numberOfQuestions) {
-            for (let i = arrWithResults.length; i < numberOfQuestions; i++) {
-                arrWithResults.push('false')
-            }
-
-        }
-        localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
-        setDefaultValues();
-        createBtnScore(cardArr, currCategoryNum)
-    })
-
-    buttonCategoryHome.addEventListener('click', () => {
-        if (arrWithResults.length < numberOfQuestions) {
-            for (let i = arrWithResults.length; i < numberOfQuestions; i++) {
-                arrWithResults.push('false')
-            }
-        }
-        localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
-        createBtnScore(cardArr, currCategoryNum)
-    })
-
-
-
-
     function setDefaultValues() {
         hideModal(modalResults)
         removeClass(quizQuestionsNumArr, 'correct')
@@ -110,7 +75,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         currImgNum = 0;
         arrWithResults = [];
     }
-
 
     function setNumberOfCurrentImg() {
         currImgNum++
@@ -133,7 +97,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         const maxIndex = infoArr.length - 1;
         const numberOfAnswers = 4;
         correctAnswer = partArr[arrNumber][imageNum].author;
-
         let answersArr = [correctAnswer];
         for (let i = 0; i < numberOfAnswers - 1; i++) {
             let answer = infoArr[getRandomNum(0, maxIndex)].author
@@ -143,16 +106,12 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                 answersArr.push(infoArr[getRandomNum(0, maxIndex)].author)
             }
         }
-
         shuffle(answersArr);
-
         quizAnswerContainersArr.forEach((container, index) => {
             container.innerHTML = `${answersArr[index]}`
         })
-
         checkAnswer()
     }
-
 
     function checkAnswer() {
         quizAnswerContainersArr.forEach(cont => {
@@ -162,16 +121,36 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                 } else {
                     cont.classList.add('wrong')
                 }
-
                 modalContent.textContent = `правильный ответ: ${correctAnswer}`
                 quizAnswersContainer.classList.add('disabled')
-
                 showModal(modalNext)
-
             })
         })
     }
 
+    btnResult.addEventListener('click', () => {
+        makeVisible('artist-category')
+        localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
+        setDefaultValues()
+        createBtnScore(cardArr, currCategoryNum, 'artist')
+    })
+
+    buttonCategoryArtist.addEventListener('click', () => {
+        fulfillArrWithAnswers(arrWithResults)
+        localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
+        setDefaultValues();
+        createBtnScore(cardArr, currCategoryNum, 'artist')
+    })
+
+    buttonsCategoryHome.forEach(btn => {
+        btn.addEventListener('click', () => {
+            console.log(currCategoryNum)
+            fulfillArrWithAnswers(arrWithResults)
+            localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
+            setDefaultValues();
+            createBtnScore(cardArr, currCategoryNum, 'artist')
+        })
+    })
 });
 
 
@@ -196,12 +175,26 @@ export function getRandomNum(min, max) {
     return randomNum;
 }
 
-
 export function hideModal(modal) {
     modal.style.top = "-100%";
 }
 
 export function showModal(modal) {
     modal.style.top = "0";
+}
+
+export  function fulfillArrWithAnswers(resArr) {
+    if (resArr.length < numberOfQuestions) {
+        for (let i = resArr.length; i < numberOfQuestions; i++) {
+            resArr.push('false')
+        }
+    }
+}
+
+export function showResult(answeredQuestions, modal, modalScore, totalScore) {
+    if (answeredQuestions === numberOfQuestions) {
+        showModal(modal)
+        modalScore.innerHTML = `${totalScore} / ${numberOfQuestions}`
+    }
 }
 

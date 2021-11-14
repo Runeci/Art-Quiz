@@ -3,6 +3,8 @@
 // FONTS
 @import './fonts.scss';
 
+
+
 //RESET
 *,
 *::before,
@@ -11,6 +13,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  transition: all ease 0.5s;
 }
 
 a {
@@ -92,6 +95,10 @@ h2 {
   border: 1px solid $font-color;
 }
 
+.button {
+  border: 1px solid transparent;
+}
+
 .button:active,
 .button-main:active {
   color: $main-color;
@@ -114,7 +121,8 @@ h2 {
 @import "components/artist_quiz";
 @import "components/artist_result";
 
-@import "components/art";
+@import "components/arts";
+@import "components/arts_quiz";
 
 
 

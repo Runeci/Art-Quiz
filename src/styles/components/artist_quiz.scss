@@ -1,5 +1,4 @@
-
-
+.arts-quiz__header,
 .artist-quiz__header {
   display: flex;
   justify-content: space-between;
@@ -14,6 +13,7 @@
   gap: 10px;
 }
 
+.arts-quiz__card,
 .artist-quiz__card {
   display: flex;
   align-self: center;
@@ -23,6 +23,7 @@
   justify-content: center;
 }
 
+.arts-quiz__question,
 .artist-quiz__question {
   margin-bottom: 20px;
 }
@@ -38,6 +39,8 @@
   margin-bottom: 20px;
 }
 
+
+.arts-quiz__answers,
 .artist-quiz__answers {
   display: flex;
   gap: 20px;
@@ -45,9 +48,9 @@
   justify-content: center;
 }
 
+.arts-quiz__questions-number,
 .artist-quiz__questions-number {
   margin-bottom: 20px;
-
 }
 
 .artist-quiz__answer {
@@ -86,7 +89,10 @@
 
 
 .modal,
+.arts-modal,
+.modal-results-arts,
 .modal-results {
+  color: $main-color;
   display: block;
   top: -100%;/* Скрыто по умолчанию */
   position: fixed; /* Оставаться на месте */
@@ -100,12 +106,12 @@
   background-color: rgba(0,0,0,0.4); /*Черный с непрозрачностью */
   transition: top 0.8s ease;
   text-align: center;
-
 }
 
 
 
 /* Модальное содержание */
+.modal-arts-content,
 .modal-content {
   display: flex;
   justify-content: center;
@@ -125,6 +131,7 @@
   color: $main-color;
 }
 
+.arts-quiz__next,
 .artist-quiz__next {
   text-align: center;
   border-radius: 60px;
@@ -133,10 +140,12 @@
   color: $main-color;
 }
 
+.arts-quiz__next:hover,
 .artist-quiz__next:hover {
-  opacity: 0.6;
+  border: 1px solid black;
 }
 
+.arts-quiz__questions-number,
 .artist-quiz__questions-number {
   display: flex;
   justify-content: space-between;
@@ -144,6 +153,7 @@
   max-width: 500px;
 }
 
+.arts-quiz__question-number,
 .artist-quiz__question-number {
   width: 10px;
   height: 10px;
@@ -151,11 +161,14 @@
   border-radius: 50%;
 }
 
+
+.arts-quiz__question-number.correct,
 .artist-quiz__question-number.correct {
   border: 1px solid $accent-color;
   background: $accent-color;
 }
 
+.arts-quiz__question-number.wrong,
 .artist-quiz__question-number.wrong {
   border: 1px solid $accent-color;
 }

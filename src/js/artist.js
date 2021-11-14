@@ -1,35 +1,30 @@
 import {makeVisible} from "./main";
 import {numberOfQuestions} from "./artist_quiz";
 
-
 export async function loadJson(path) { // (1)
     let response = await fetch(path); // (2)
-    if (response.status == 200) {
+    if (response.status === 200) {
         return await response.json(); // (3)
     }
     throw new Error(response.status);
 }
 
+loadJson('./assets/json.json').catch(alert).then(data => {
+    const infoArr = data.items;
+    makeCategoryCard('artist-category__categories', 'artist', 0, infoArr, 10)
+    const cardArr = document.querySelectorAll('.artist-card')
+    const imgArr = document.querySelectorAll('.artist-card__img')
+    checkVisitState(cardArr, imgArr, 'artist')
 
-loadJson('./assets/json.json')
-    .catch(alert)
-    .then(data => {
-        const infoArr = data.items;
-        makeCategoryCard('artist-category__categories', 'artist', 0, infoArr, 10)
-        const cardArr = document.querySelectorAll('.artist-card')
-        const imgArr = document.querySelectorAll('.artist-card__img')
-        checkVisitState(cardArr, imgArr)
-
-
-        setLocalStorage(cardArr, 'visited')
-        cardArr.forEach((card, index) => {
-            card.addEventListener('click', () => {
-                createBtnScore(cardArr, index)
-            })
+    setLocalStorage(cardArr, 'visited', 'artist')
+    cardArr.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            createBtnScore(cardArr, index, 'artist')
         })
+    })
 
-        goToQuizPage(cardArr)
-    });
+    goToQuizPage(cardArr, 'artist-quiz')
+});
 
 
 export function makeCategoryCard(container, categoryName, categoryImgInd, arr, size) {
@@ -59,44 +54,44 @@ export function makeCategoryCard(container, categoryName, categoryImgInd, arr, s
 }
 
 
-export function checkVisitState(cardArr, imgArr) {
+export function checkVisitState(cardArr, imgArr, categoryName) {
     cardArr.forEach((card, index) => {
         card.addEventListener('click', () => {
             card.setAttribute('visited', 'true')
             imgArr[index].classList.remove('not-visited')
         })
 
-        if (localStorage.getItem(`visited ${index}`) === 'true') {
+        if (localStorage.getItem(`${categoryName} visited ${index}`) === 'true') {
             card.setAttribute('visited', 'true')
             imgArr[index].classList.remove('not-visited')
         }
     })
 }
 
-export function createBtnScore(cardArr, currCategoryCard) {
+export function createBtnScore(cardArr, currCategoryCard, categoryName) {
     const btn = document.createElement('button')
     btn.classList.add('card-btn')
     btn.setAttribute('data-btn-number', `${currCategoryCard}`)
-    let score = localStorage.getItem(`card artist ${currCategoryCard}`) || 0;
+    let score = localStorage.getItem(`card ${categoryName} ${currCategoryCard}`) || 0;
     btn.innerHTML = `${score} / ${numberOfQuestions}`;
     cardArr[currCategoryCard].append(btn)
 }
 
 
-export function setLocalStorage(cardArr, attr) {
+export function setLocalStorage(cardArr, attr, categoryName) {
     cardArr.forEach((card, index) => {
         card.addEventListener('click', () => {
             if (card.hasAttribute(attr)) {
-                localStorage.setItem(`${attr} ${index}`, `${card.getAttribute(attr)}`)
+                localStorage.setItem(`${categoryName} ${attr} ${index}`, `${card.getAttribute(attr)}`)
             }
         })
     })
 }
 
-export function goToQuizPage(cardArr) {
+export function goToQuizPage(cardArr, quizName) {
     cardArr.forEach((card) => {
         card.addEventListener('click', () => {
-            makeVisible('artist-quiz')
+            makeVisible(`${quizName}`)
         })
     })
 }

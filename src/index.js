@@ -8,7 +8,8 @@ import './js/artist_quiz'
 import './js/artist'
 import './js/artist_results'
 
-import './js/art'
+import './js/arts'
+import './js/arts_quiz'
 
 
 

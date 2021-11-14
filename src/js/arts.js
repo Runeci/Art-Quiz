@@ -1,6 +1,5 @@
-import {makeVisible} from "./main";
-import {setLocalStorage, checkVisitState, makeCategoryCard, loadJson, createBtnScore, goToQuizPage} from "./artist";
-
+import {makeCategoryCard, checkVisitState, createBtnScore, goToQuizPage, setLocalStorage} from "./artist";
+import {loadJson} from "./artist";
 
 loadJson('./assets/json.json')
     .catch(alert)
@@ -9,18 +8,18 @@ loadJson('./assets/json.json')
         makeCategoryCard('arts-category__categories', 'arts', 1, infoArr, 10)
         const cardArr = document.querySelectorAll('.arts-card')
         const imgArr = document.querySelectorAll('.arts-card__img')
-        checkVisitState(cardArr, imgArr)
 
+        checkVisitState(cardArr, imgArr, 'arts')
 
+        setLocalStorage(cardArr, 'visited', 'arts')
 
-        setLocalStorage(cardArr, 'visited')
         cardArr.forEach((card, index) => {
             card.addEventListener('click', () => {
-                createBtnScore(cardArr, index)
+                createBtnScore(cardArr, index, 'arts')
             })
         })
 
-        goToQuizPage(cardArr)
+        goToQuizPage(cardArr, 'arts-quiz')
     });
 
 

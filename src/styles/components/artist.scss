@@ -21,7 +21,8 @@
 .artist-card {
   max-width: 180px;
   width: 100%;
-  height: 200px;
+  height: 210px;
+  gap: 10px;
   margin: 10px;
   background-size: cover;
   cursor: pointer;
@@ -57,10 +58,13 @@
   filter: grayscale(100%);
 }
 
+.arts-card:hover,
 .artist-card:hover {
+  .arts-img:hover,
   .artist-card__img {
     opacity: 0.5;
   }
+  .arts-card__question,
   .artist-card__question {
     color: $accent-color;
   }

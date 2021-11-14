@@ -1,6 +1,6 @@
 import {loadJson} from "./artist";
 import {divideIntoParts} from "./artist_quiz";
-import {buttonCategoryHome, makeVisible} from "./main";
+import {makeVisible} from "./main";
 
 loadJson('./assets/json.json')
     .catch(alert)
@@ -18,12 +18,11 @@ loadJson('./assets/json.json')
             artistsResults.innerHTML = ''
         })
 
-        cardArr.forEach((card, i) => {
+        cardArr.forEach((card) => {
             card.addEventListener('click', (e) => {
-
                 if(e.target.hasAttribute('data-btn-number')) {
-
                     makeVisible('artists-results')
+                    console.log('visible')
                     let index = e.target.getAttribute('data-btn-number')
                     arrayParts[index].forEach((card, i) => {
                         createResultCards(index, i)
@@ -39,8 +38,6 @@ loadJson('./assets/json.json')
                 }
             })
         })
-
-
 
         function createResultCards(arrPartsInd, objInd) {
             const resultCard = document.createElement('div')
