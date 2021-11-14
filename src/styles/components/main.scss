@@ -36,3 +36,15 @@
   gap: 20px;
 }
 
+.logo{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

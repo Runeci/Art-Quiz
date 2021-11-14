@@ -15,7 +15,7 @@ loadJson('./assets/json.json')
     .catch(alert)
     .then(data => {
         const infoArr = data.items;
-        makeCategoryCard(infoArr, 10)
+        makeCategoryCard('artist-category__categories', 'artist', 0, infoArr, 10)
         const cardArr = document.querySelectorAll('.artist-card')
         const imgArr = document.querySelectorAll('.artist-card__img')
         checkVisitState(cardArr, imgArr)
@@ -32,34 +32,34 @@ loadJson('./assets/json.json')
     });
 
 
-export function makeCategoryCard(arr, size) {
-    const artistCategory = document.querySelector('.artist-category__categories')
+export function makeCategoryCard(container, categoryName, categoryImgInd, arr, size) {
+    const containerMain = document.querySelector(`.${container}`)
     let arrays = [];
     while (arr.length > 0)
         arrays.push(arr.splice(0, size));
 
     arrays.forEach((arr, i) => {
-        const artistCategoryCard = document.createElement('div')
-        const artistQuestionAmount = document.createElement('div')
-        const artistCategoryImg = document.createElement('div')
+        const card = document.createElement('div')
+        const questionAmount = document.createElement('div')
+        const img = document.createElement('div')
 
-        artistCategoryCard.classList.add('artist-card')
+        card.classList.add(`${categoryName}-card`)
 
-        artistQuestionAmount.classList.add('artist-card__question')
-        artistQuestionAmount.innerHTML = `${i + 1}`
+        questionAmount.classList.add(`${categoryName}-card__question`)
+        questionAmount.innerHTML = `${i + 1}`
 
-        artistCategoryImg.classList.add('not-visited')
-        artistCategoryImg.classList.add('artist-card__img')
-        artistCategoryImg.style.backgroundImage = `url("./assets/images/img/${arr[0].imageNum}.jpg")`
+        img.classList.add('not-visited')
+        img.classList.add(`${categoryName}-card__img`)
+        img.style.backgroundImage = `url("./assets/images/img/${arr[categoryImgInd].imageNum}.jpg")`
 
-        artistCategoryCard.appendChild(artistQuestionAmount)
-        artistCategoryCard.appendChild(artistCategoryImg)
-        artistCategory.appendChild(artistCategoryCard)
+        card.appendChild(questionAmount)
+        card.appendChild(img)
+        containerMain.appendChild(card)
     })
-
 }
 
-function checkVisitState(cardArr, imgArr) {
+
+export function checkVisitState(cardArr, imgArr) {
     cardArr.forEach((card, index) => {
         card.addEventListener('click', () => {
             card.setAttribute('visited', 'true')
@@ -83,7 +83,7 @@ export function createBtnScore(cardArr, currCategoryCard) {
 }
 
 
-function setLocalStorage(cardArr, attr) {
+export function setLocalStorage(cardArr, attr) {
     cardArr.forEach((card, index) => {
         card.addEventListener('click', () => {
             if (card.hasAttribute(attr)) {
@@ -93,7 +93,7 @@ function setLocalStorage(cardArr, attr) {
     })
 }
 
-function goToQuizPage(cardArr) {
+export function goToQuizPage(cardArr) {
     cardArr.forEach((card) => {
         card.addEventListener('click', () => {
             makeVisible('artist-quiz')

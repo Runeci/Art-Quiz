@@ -9,6 +9,7 @@
   margin-bottom: 20px;
 }
 
+.arts-category__categories,
 .artist-category__categories {
   display: flex;
   flex-wrap: wrap;
@@ -16,20 +17,7 @@
   justify-content: center;
 }
 
-.artist-category__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.artist-category__logo,
-.artist-quiz__logo,
-.artist-result__logo{
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
+.arts-card,
 .artist-card {
   max-width: 180px;
   width: 100%;
@@ -42,6 +30,7 @@
   position: relative;
 }
 
+.arts-card__question,
 .artist-card__question {
   width: 100%;
   background-color: $main-color;
@@ -51,6 +40,7 @@
   text-align: left;
 }
 
+.arts-card__img,
 .artist-card__img {
   background-size: cover;
   background-position: center;
