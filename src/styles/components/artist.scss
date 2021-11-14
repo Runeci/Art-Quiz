@@ -1,3 +1,4 @@
+
 .artist-category__content {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,14 @@
   justify-content: space-between;
 }
 
+.artist-category__logo,
+.artist-quiz__logo,
+.artist-result__logo{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .artist-card {
   max-width: 180px;
   width: 100%;
@@ -35,35 +44,53 @@
 
 .artist-card__question {
   width: 100%;
-  background-color: white;
-  padding: 0 20px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
+  background-color: $main-color;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: left;
 }
 
 .artist-card__img {
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  border-radius: 20px;
   width: 100%;
   height: 100%;
 
 }
 
+.wrong-answer,
 .not-visited {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
 
 .artist-card:hover {
-  opacity: 0.5;
+  .artist-card__img {
+    opacity: 0.5;
+  }
+  .artist-card__question {
+    color: $accent-color;
+  }
+
 }
 
 .card-btn {
   position: absolute;
-  right: 5px;
-  top: 7px;
-  font-size: 10px;
-  padding: 2px;
+  right: 0;
+  top: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: $accent-color;
+  background-color: $main-color;
+  border-radius: 20px;
+  padding: 0 5px;
+}
+
+.card-btn:hover {
+  background-color: $font-color;
+  color: $main-color;
 }

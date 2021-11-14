@@ -1,6 +1,6 @@
 import {loadJson} from "./artist";
 import {divideIntoParts} from "./artist_quiz";
-import {makeVisible} from "./main";
+import {buttonCategoryHome, makeVisible} from "./main";
 
 loadJson('./assets/json.json')
     .catch(alert)
@@ -11,6 +11,12 @@ loadJson('./assets/json.json')
         const arrayParts = [];
         divideIntoParts(infoArr, arrayParts);
 
+        const btn = document.querySelector('.button-home-artist-res')
+
+        btn.addEventListener('click', ()=> {
+            console.log('clear')
+            artistsResults.innerHTML = ''
+        })
 
         cardArr.forEach((card, i) => {
             card.addEventListener('click', (e) => {
@@ -21,35 +27,25 @@ loadJson('./assets/json.json')
                     let index = e.target.getAttribute('data-btn-number')
                     arrayParts[index].forEach((card, i) => {
                         createResultCards(index, i)
-
                     })
                     const z = localStorage.getItem(`artist results ${index}`).split(',')
                     const all = document.querySelectorAll('.result-card')
-                    console.log(all)
                     z.forEach((item, index) => {
+                        console.log(all[index])
                         if(item === 'true') {
-                            all[index].style.border = '3px solid green'
+                            all[index].classList.remove('wrong-answer')
                         }
                     })
-
                 }
-
             })
         })
 
+
+
         function createResultCards(arrPartsInd, objInd) {
-            // const z = localStorage.getItem(`artist results ${arrPartsInd}`).split(',')
-            // console.log(z)
-            // z.forEach((item, index) => {
-            //     if (item === 'true') {
-            //         console.log('hi', index)
-            //     }
-            // })
             const resultCard = document.createElement('div')
-            resultCard.classList.add('result-card')
+            resultCard.classList.add('result-card', 'wrong-answer')
             resultCard.style.backgroundImage = `url("./assets/images/img/${arrayParts[arrPartsInd][objInd].imageNum}.jpg")`
             artistsResults.append(resultCard)
         }
-
-
     });

@@ -1,11 +1,12 @@
-import {createBtnScore, loadJson} from "./artist";
-import {buttonCategoryArtist, buttonHome, makeVisible, removeClass} from "./main";
+import  {createBtnScore, loadJson} from "./artist";
+import {buttonCategoryArtist, buttonCategoryHome, buttonHome, makeVisible, removeClass} from "./main";
+
 
 export const numberOfQuestions = 10;
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     let infoArr = data.items;
-    const cardArr = document.querySelectorAll('.artist-card') // arr with all category cards
+    const cardArr = document.querySelectorAll('.artist-card')
     const btnNext = document.querySelector('.artist-quiz__next')
     const quizAnswersContainer = document.querySelector('.artist-quiz__answers')
     const quizAnswerContainersArr = document.querySelectorAll('.artist-quiz__answer')
@@ -25,14 +26,10 @@ loadJson('./assets/json.json').catch(alert).then(data => {
 
     divideIntoParts(infoArr, arrayParts);
 
-    cardArr.forEach((card, i) => {
-        if (localStorage.getItem(`visited ${i}`) === 'true') {
-            createBtnScore(cardArr, i)
-        }
-
-    })
-
     cardArr.forEach((card, index) => {
+        if (localStorage.getItem(`visited ${index}`) === 'true') {
+            createBtnScore(cardArr, index)
+        }
         card.addEventListener('click', () => {
             currCategoryNum = index;
             setFirstQuizImg(arrayParts, index)
@@ -50,7 +47,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
 
         localStorage.setItem(`card artist ${currCategoryNum}`, `${score}`) //set score
 
-        // localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
         quizAnswersContainer.classList.remove('disabled')
         numberOfAnsweredQuestions++
         if (numberOfAnsweredQuestions === numberOfQuestions) {
@@ -60,6 +56,17 @@ loadJson('./assets/json.json').catch(alert).then(data => {
 
         if (localStorage.getItem(`visited ${currCategoryNum}`) === 'true') {
             createBtnScore(cardArr, currCategoryNum)
+        }
+    })
+
+    quizAnswersContainer.addEventListener('click', e => { // get total score
+        if (e.target.innerHTML === correctAnswer) {
+            score++
+            arrWithResults.push('true')
+            quizQuestionsNumArr[currImgNum].classList.add('correct')
+        } else {
+            arrWithResults.push('false')
+            quizQuestionsNumArr[currImgNum].classList.add('wrong')
         }
     })
 
@@ -73,8 +80,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         if (arrWithResults.length < numberOfQuestions) {
             for (let i = arrWithResults.length; i < numberOfQuestions; i++) {
                 arrWithResults.push('false')
-                console.log(arrWithResults.length, 'length' )
-                console.log(arrWithResults)
             }
 
         }
@@ -82,6 +87,18 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         setDefaultValues();
         createBtnScore(cardArr, currCategoryNum)
     })
+
+    buttonCategoryHome.addEventListener('click', () => {
+        if (arrWithResults.length < numberOfQuestions) {
+            for (let i = arrWithResults.length; i < numberOfQuestions; i++) {
+                arrWithResults.push('false')
+            }
+        }
+        localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
+        createBtnScore(cardArr, currCategoryNum)
+    })
+
+
 
 
     function setDefaultValues() {
@@ -136,18 +153,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         checkAnswer()
     }
 
-
-    quizAnswersContainer.addEventListener('click', e => { // get total score
-        if (e.target.innerHTML === correctAnswer) {
-            score++
-            arrWithResults.push('true')
-            quizQuestionsNumArr[currImgNum].classList.add('correct')
-
-        } else {
-            arrWithResults.push('false')
-            quizQuestionsNumArr[currImgNum].classList.add('wrong')
-        }
-    })
 
     function checkAnswer() {
         quizAnswerContainersArr.forEach(cont => {

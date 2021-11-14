@@ -1,10 +1,17 @@
-export const buttonArtist = document.querySelector(".artist-quiz");
-export const buttonArt = document.querySelector(".picture-quiz");
-export const buttonSettings = document.querySelector(".button-settings");
+// export const buttonArtist = document.querySelector(".artist-quiz");
+// export const buttonArt = document.querySelector(".picture-quiz");
+// export const buttonSettings = document.querySelector(".button-settings");
+
+
+export const buttonArtist = document.querySelector(".main__artist-btn");
+export const buttonArt = document.querySelector(".main__art-btn");
+export const buttonSettings = document.querySelector(".main__settings-btn");
 export const buttonBack = document.querySelectorAll(".button-back");
 export const dataAttrArray = document.querySelectorAll("[data-visible]");
 export const buttonHome = document.querySelectorAll('.button-home')
 export const buttonCategoryArtist = document.querySelector('.button-category-artist')
+export const buttonCategoryHome = document.querySelector('.button-home-artist')
+
 
 buttonBack.forEach((button) => {
     button.addEventListener("click", () => {

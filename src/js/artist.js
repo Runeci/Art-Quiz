@@ -1,6 +1,7 @@
 import {makeVisible} from "./main";
 import {numberOfQuestions} from "./artist_quiz";
 
+
 export async function loadJson(path) { // (1)
     let response = await fetch(path); // (2)
     if (response.status == 200) {
@@ -18,7 +19,8 @@ loadJson('./assets/json.json')
         const cardArr = document.querySelectorAll('.artist-card')
         const imgArr = document.querySelectorAll('.artist-card__img')
         checkVisitState(cardArr, imgArr)
-        // addBtnToVisitedCard(cardArr, 'visited')
+
+
         setLocalStorage(cardArr, 'visited')
         cardArr.forEach((card, index) => {
             card.addEventListener('click', () => {
@@ -27,7 +29,6 @@ loadJson('./assets/json.json')
         })
 
         goToQuizPage(cardArr)
-
     });
 
 
@@ -68,37 +69,19 @@ function checkVisitState(cardArr, imgArr) {
         if (localStorage.getItem(`visited ${index}`) === 'true') {
             card.setAttribute('visited', 'true')
             imgArr[index].classList.remove('not-visited')
-            // createBtnResults(card)
         }
     })
 }
 
 export function createBtnScore(cardArr, currCategoryCard) {
     const btn = document.createElement('button')
-    btn.classList.add('card-btn', 'button')
+    btn.classList.add('card-btn')
     btn.setAttribute('data-btn-number', `${currCategoryCard}`)
     let score = localStorage.getItem(`card artist ${currCategoryCard}`) || 0;
     btn.innerHTML = `${score} / ${numberOfQuestions}`;
     cardArr[currCategoryCard].append(btn)
 }
 
-// function createBtnResults(card) {
-//     const btn = document.createElement('button')
-//     btn.classList.add('card-btn')
-//     btn.classList.add('button')
-//     console.log(card, 'card')
-//     btn.innerHTML = `0 / ${numberOfQuestions}`
-// }
-//
-// function addBtnToVisitedCard(cardArr, attr) {
-//     cardArr.forEach((card) => {
-//         card.addEventListener('click', () => {
-//             if (card.getAttribute(attr) === 'true') {
-//                 createBtnResults(card)
-//             }
-//         })
-//     })
-// }
 
 function setLocalStorage(cardArr, attr) {
     cardArr.forEach((card, index) => {
@@ -111,7 +94,7 @@ function setLocalStorage(cardArr, attr) {
 }
 
 function goToQuizPage(cardArr) {
-    cardArr.forEach((card, i) => {
+    cardArr.forEach((card) => {
         card.addEventListener('click', () => {
             makeVisible('artist-quiz')
         })
