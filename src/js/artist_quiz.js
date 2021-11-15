@@ -1,5 +1,10 @@
 import  {createBtnScore, loadJson} from "./artist";
-import {buttonCategoryArtist, buttonCategoryHome, buttonsCategoryHome, makeVisible, removeClass} from "./main";
+import {
+    buttonCategoryArtist,
+    buttonsCategoryHome,
+    makeVisible,
+    removeClass
+} from "./main";
 export const numberOfQuestions = 10;
 
 loadJson('./assets/json.json').catch(alert).then(data => {
@@ -138,19 +143,19 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     buttonCategoryArtist.addEventListener('click', () => {
         fulfillArrWithAnswers(arrWithResults)
         localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
-        setDefaultValues();
         createBtnScore(cardArr, currCategoryNum, 'artist')
+        setDefaultValues();
     })
 
     buttonsCategoryHome.forEach(btn => {
         btn.addEventListener('click', () => {
-            console.log(currCategoryNum)
             fulfillArrWithAnswers(arrWithResults)
             localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
-            setDefaultValues();
             createBtnScore(cardArr, currCategoryNum, 'artist')
+            setDefaultValues();
         })
     })
+
 });
 
 
@@ -197,4 +202,8 @@ export function showResult(answeredQuestions, modal, modalScore, totalScore) {
         modalScore.innerHTML = `${totalScore} / ${numberOfQuestions}`
     }
 }
+
+// export function setScoreToLocalStorage (score, categoryName){
+//     localStorage.setItem(`card ${categoryName} ${currCategoryNum}`, `${score}`)
+// }
 

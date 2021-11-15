@@ -71,7 +71,8 @@
 
 }
 
-.card-btn {
+.card-btn-arts,
+.card-btn-artist {
   position: absolute;
   right: 0;
   top: 0;
@@ -84,7 +85,8 @@
   padding: 0 5px;
 }
 
-.card-btn:hover {
+.card-btn-arts:hover,
+.card-btn-artist:hover {
   background-color: $font-color;
   color: $main-color;
 }

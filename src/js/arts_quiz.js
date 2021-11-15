@@ -36,7 +36,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             createBtnScore(cardArr, index, 'arts')
         }
         card.addEventListener('click', () => {
-
             currCategoryNum = index;
             setFirstQuizQuestion(arrayParts, index)
             getAnswers(arrayParts, currCategoryNum, currImgNum);
@@ -106,6 +105,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     function setQuestion(arr, index, num) {
         const question = document.querySelector('.arts-quiz__question')
         question.innerHTML = `Какую картину написал(а) ${arr[index][num].author}?`
+        console.log(arr[index][num].author)
     }
 
     function getAnswers (partArr, arrNumber, imageNum) {

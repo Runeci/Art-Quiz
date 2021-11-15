@@ -70,11 +70,12 @@ export function checkVisitState(cardArr, imgArr, categoryName) {
 
 export function createBtnScore(cardArr, currCategoryCard, categoryName) {
     const btn = document.createElement('button')
-    btn.classList.add('card-btn')
+    btn.classList.add(`card-btn-${categoryName}`)
     btn.setAttribute('data-btn-number', `${currCategoryCard}`)
     let score = localStorage.getItem(`card ${categoryName} ${currCategoryCard}`) || 0;
     btn.innerHTML = `${score} / ${numberOfQuestions}`;
     cardArr[currCategoryCard].append(btn)
+
 }
 
 

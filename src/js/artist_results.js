@@ -1,6 +1,6 @@
-import {loadJson} from "./artist";
-import {divideIntoParts} from "./artist_quiz";
-import {makeVisible} from "./main";
+import {createBtnScore, loadJson} from "./artist";
+import {divideIntoParts, fulfillArrWithAnswers} from "./artist_quiz";
+import {buttonCategoryArtistRes, makeVisible} from "./main";
 
 loadJson('./assets/json.json')
     .catch(alert)
@@ -12,6 +12,12 @@ loadJson('./assets/json.json')
         divideIntoParts(infoArr, arrayParts);
 
         const btn = document.querySelector('.button-home-artist-res')
+        const btnCategory = document.querySelector('.button-category-artist-res')
+
+        btnCategory.addEventListener('click', ()=> {
+            console.log('clear')
+            artistsResults.innerHTML = ''
+        })
 
         btn.addEventListener('click', ()=> {
             console.log('clear')
@@ -45,4 +51,5 @@ loadJson('./assets/json.json')
             resultCard.style.backgroundImage = `url("./assets/images/img/${arrayParts[arrPartsInd][objInd].imageNum}.jpg")`
             artistsResults.append(resultCard)
         }
+
     });

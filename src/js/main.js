@@ -5,6 +5,7 @@ export const dataAttrArray = document.querySelectorAll("[data-visible]");
 export const buttonHome = document.querySelectorAll('.button-home')
 export const buttonCategoryArtist = document.querySelector('.button-category-artist')
 export const buttonsCategoryHome = document.querySelectorAll('.button-home-artist')
+export const buttonCategoryArtistRes = document.querySelector('.button-category-artist-res')
 
 
 export function makeVisible(id) {
@@ -42,5 +43,9 @@ buttonHome.forEach(button => {
 })
 
 buttonCategoryArtist.addEventListener('click', () => {
+    makeVisible('artist-category')
+})
+
+buttonCategoryArtistRes.addEventListener('click', () => {
     makeVisible('artist-category')
 })
