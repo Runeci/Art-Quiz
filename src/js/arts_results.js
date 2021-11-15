@@ -2,12 +2,13 @@ import {loadJson} from "./artist";
 import {divideIntoParts} from "./artist_quiz";
 import {makeVisible} from "./main";
 
+
 loadJson('./assets/json.json')
     .catch(alert)
     .then(data => {
         const infoArr = data.items;
-        const cardArr = document.querySelectorAll('.artist-card') // arr with all category cards
-        const artistsResults = document.querySelector('.artist-result__container')
+        const cardArr = document.querySelectorAll('.arts-card') // arr with all category cards
+        const artistsResults = document.querySelector('.arts-result__container')
         const arrayParts = [];
         divideIntoParts(infoArr, arrayParts);
 
@@ -27,13 +28,13 @@ loadJson('./assets/json.json')
         cardArr.forEach((card) => {
             card.addEventListener('click', (e) => {
                 if(e.target.hasAttribute('data-btn-number')) {
-                    makeVisible('artists-results')
+                    makeVisible('arts-results')
                     console.log('visible')
                     let index = e.target.getAttribute('data-btn-number')
                     arrayParts[index].forEach((card, i) => {
                         createResultCards(index, i)
                     })
-                    const z = localStorage.getItem(`artist results ${index}`).split(',')
+                    const z = localStorage.getItem(`arts results ${index}`).split(',')
                     const all = document.querySelectorAll('.result-card')
                     z.forEach((item, index) => {
                         console.log(all[index])

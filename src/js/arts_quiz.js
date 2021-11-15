@@ -51,6 +51,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         hideModal(modalNext)
 
         localStorage.setItem(`card arts ${currCategoryNum}`, `${score}`) //set score
+        localStorage.setItem(`arts results ${currCategoryNum}`, `${arrWithResults}`)
 
         quizAnswersContainer.classList.remove('disabled')
         numberOfAnsweredQuestions++

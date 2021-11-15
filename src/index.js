@@ -10,6 +10,7 @@ import './js/artist_results'
 
 import './js/arts'
 import './js/arts_quiz'
+import './js/arts_results'
 
 
 

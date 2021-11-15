@@ -1,8 +1,9 @@
+export const wrapper = document.querySelector('.wrapper ')
 export const buttonArtist = document.querySelector(".main__artist-btn");
 export const buttonArt = document.querySelector(".main__art-btn");
 export const buttonSettings = document.querySelector(".main__settings-btn");
 export const dataAttrArray = document.querySelectorAll("[data-visible]");
-export const buttonHome = document.querySelectorAll('.button-home')
+export const buttonHomeArr = document.querySelectorAll('.button-home')
 export const buttonCategoryArtist = document.querySelector('.button-category-artist')
 export const buttonsCategoryHome = document.querySelectorAll('.button-home-artist')
 export const buttonCategoryArtistRes = document.querySelector('.button-category-artist-res')
@@ -26,19 +27,27 @@ export function removeClass(arr, className) {
 
 buttonArtist.addEventListener("click", () => {
     makeVisible("artist-category");
+    wrapper.style.backgroundImage = 'none'
 });
 
 buttonArt.addEventListener("click", () => {
     makeVisible("arts-category");
+    wrapper.style.backgroundImage = 'none'
 });
 
 buttonSettings.addEventListener("click", () => {
     makeVisible("settings");
+    wrapper.style.backgroundImage = 'none'
 });
 
-buttonHome.forEach(button => {
+buttonHomeArr.forEach(button => {
     button.addEventListener('click', () => {
+        console.log(wrapper.style.backgroundImage)
+        wrapper.style.backgroundImage = 'url("./assets/images/main-img.jpg")'
         makeVisible('main')
+        console.log(wrapper.style.backgroundImage)
+        console.log('oejfpeowjjgpowe')
+
     })
 })
 

@@ -1,15 +1,18 @@
+.arts-result__header,
 .artist-result__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.arts-buttons-results,
 .artist-buttons-results {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
 
+.arts-result__container,
 .artist-result__container {
   display: flex;
   flex-wrap: wrap;
