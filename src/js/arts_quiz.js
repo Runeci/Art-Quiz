@@ -8,7 +8,7 @@ import {
     showModal, showResult,
     shuffle
 } from "./artist_quiz";
-import {buttonsCategoryHomeArts, makeVisible, removeClass} from "./main";
+import {buttonCategoryArtsQuiz, makeVisible, removeClass} from "./main";
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     const infoArr = data.items;
@@ -141,12 +141,11 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         })
     }
 
-    buttonsCategoryHomeArts.forEach(btn => {
-        btn.addEventListener('click', () => {
-            fulfillArrWithAnswers(arrWithResults)
-            localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
-            createBtnScore(cardArr, currCategoryNum, 'artist')
-            setDefaultValues();
-        })
+    buttonCategoryArtsQuiz.addEventListener('click', () => {
+        fulfillArrWithAnswers(arrWithResults)
+        localStorage.setItem(`arts results ${currCategoryNum}`, `${arrWithResults}`)
+        createBtnScore(cardArr, currCategoryNum, 'arts')
+        setDefaultValues();
     })
+
 });

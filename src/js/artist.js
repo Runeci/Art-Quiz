@@ -78,7 +78,6 @@ export function createBtnScore(cardArr, currCategoryCard, categoryName) {
 
 }
 
-
 export function setLocalStorage(cardArr, attr, categoryName) {
     cardArr.forEach((card, index) => {
         card.addEventListener('click', () => {

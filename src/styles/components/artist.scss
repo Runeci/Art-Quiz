@@ -16,7 +16,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: calc(#{$height} + 20px);
+  padding-top: calc(#{$height} + 30px);
 }
 
 .arts-card,
@@ -33,6 +33,13 @@
   position: relative;
 }
 
+@media (max-width: 430px) {
+  .arts-card,
+  .artist-card {
+    max-width: 100%;
+  }
+}
+
 .arts-card__question,
 .artist-card__question {
   width: 100%;
@@ -43,6 +50,8 @@
   text-align: left;
   padding: 0 12px;
 }
+
+
 
 .arts-card__img,
 .artist-card__img {

@@ -64,6 +64,12 @@
   align-items: center;
 }
 
+@media (max-width: 460px) {
+  .logo svg {
+    display: none;
+  }
+}
+
 .category-header {
   display: flex;
   align-items: center;
@@ -73,7 +79,7 @@
   left: 0;
   width: 100%;
   padding: 15px;
-  background-color: $main-color;
+  background-color: rgba(0,0,0, 0.8);
   z-index: 100;
 }
 

@@ -1,6 +1,6 @@
 import  {createBtnScore, loadJson} from "./artist";
 import {
-    buttonCategoryArtist,
+    buttonCategoryArtistQuiz, buttonCategoryArtistRes, buttonsCategoryArtsRes,
     buttonsCategoryHome,
     makeVisible,
     removeClass
@@ -140,7 +140,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         createBtnScore(cardArr, currCategoryNum, 'artist')
     })
 
-    buttonCategoryArtist.addEventListener('click', () => {
+    buttonCategoryArtistQuiz.addEventListener('click', () => {
         fulfillArrWithAnswers(arrWithResults)
         localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
         createBtnScore(cardArr, currCategoryNum, 'artist')
@@ -153,9 +153,9 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
             createBtnScore(cardArr, currCategoryNum, 'artist')
             setDefaultValues();
+            console.log('buttons home artist')
         })
     })
-
 });
 
 
@@ -203,7 +203,4 @@ export function showResult(answeredQuestions, modal, modalScore, totalScore) {
     }
 }
 
-// export function setScoreToLocalStorage (score, categoryName){
-//     localStorage.setItem(`card ${categoryName} ${currCategoryNum}`, `${score}`)
-// }
 

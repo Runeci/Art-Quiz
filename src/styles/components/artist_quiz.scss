@@ -9,7 +9,6 @@
 .buttons-category {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -25,14 +24,14 @@
 
 .arts-quiz__question,
 .artist-quiz__question {
-  margin-bottom: 20px;
+  margin-bottom:20px;
 }
 
 .artist-quiz__img {
   min-width: 360px;
   max-width: 600px;
   width: 100%;
-  height: 600px;
+  height: 300px;
   border-radius: 20px;
   background-position: center;
   background-size: cover;
@@ -48,14 +47,22 @@
   justify-content: center;
 }
 
+
+
 .arts-quiz__questions-number,
 .artist-quiz__questions-number {
   margin-bottom: 20px;
 }
 
+.artist-quiz__question,
+.arts-quiz__question {
+  margin-top: 20%;
+}
+
+
 .artist-quiz__answer {
-  min-width: 200px;
-  max-width: 350px;
+  min-width: 150px;
+  max-width: 300px;
   width: 100%;
   padding: 20px;
   border: 1px solid $font-color;
@@ -75,6 +82,36 @@
   border: 1px solid $accent-color;
 }
 
+@media (max-width: 650px) {
+  .artist-quiz__answer {
+    max-width: 250px;
+
+  }
+}
+
+
+@media (max-width: 560px) {
+  .artist-quiz__answer {
+    max-width: 180px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .artist-quiz__answer {
+    max-width: 150px;
+  }
+  .artist-quiz__answers {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .artist-quiz__answers {
+    font-size: 16px;
+  }
+}
+
 .artist-quiz__answer.correct {
   border: 2px solid $accent-color;
 }
@@ -82,6 +119,7 @@
 .artist-quiz__answer.wrong {
   border: 2px solid red;
 }
+
 
 .disabled {
   pointer-events: none;
