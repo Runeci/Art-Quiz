@@ -12,8 +12,8 @@ loadJson('./assets/json.json')
         const arrayParts = [];
         divideIntoParts(infoArr, arrayParts);
 
-        const btn = document.querySelector('.button-home-artist-res')
-        const btnCategory = document.querySelector('.button-category-artist-res')
+        const btn = document.querySelector('.button-home-arts-res')
+        const btnCategory = document.querySelector('.button-category-arts-res')
 
         btnCategory.addEventListener('click', ()=> {
             console.log('clear')

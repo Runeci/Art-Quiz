@@ -7,6 +7,8 @@ export const buttonHomeArr = document.querySelectorAll('.button-home')
 export const buttonCategoryArtist = document.querySelector('.button-category-artist')
 export const buttonsCategoryHome = document.querySelectorAll('.button-home-artist')
 export const buttonCategoryArtistRes = document.querySelector('.button-category-artist-res')
+export const buttonsCategoryHomeArts = document.querySelectorAll('.button-home-arts')
+export const buttonsCategoryArtsRes = document.querySelectorAll('.button-home-arts-res')
 
 
 export function makeVisible(id) {
@@ -42,12 +44,8 @@ buttonSettings.addEventListener("click", () => {
 
 buttonHomeArr.forEach(button => {
     button.addEventListener('click', () => {
-        console.log(wrapper.style.backgroundImage)
         wrapper.style.backgroundImage = 'url("./assets/images/main-img.jpg")'
         makeVisible('main')
-        console.log(wrapper.style.backgroundImage)
-        console.log('oejfpeowjjgpowe')
-
     })
 })
 
