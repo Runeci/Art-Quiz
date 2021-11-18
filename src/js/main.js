@@ -1,3 +1,5 @@
+import {timerStep} from "./settings";
+
 export const wrapper = document.querySelector('.wrapper ')
 export const buttonArtist = document.querySelector(".main__artist-btn");
 export const buttonArt = document.querySelector(".main__art-btn");

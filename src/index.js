@@ -14,3 +14,4 @@ import './js/arts_results'
 
 
 
+import './js/settings'
