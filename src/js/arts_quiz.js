@@ -163,8 +163,10 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                     cont.classList.add('correct')
                     stopTimer()
                 }
+                quizQuestionsNumArr[currImgNum].classList.add('wrong')
                 const rightAnswer = document.querySelector('.arts-right-answer')
                 rightAnswer.style.backgroundImage = correctAnswer
+                quizAnswersContainer.classList.add('disabled')
                 showModal(modalNext)
             })
         }

@@ -59,7 +59,7 @@ export function countdown(){
     clearTimeout(timer);
     timerStep = parseInt(timerInput.value, 10);
     timers.forEach(timer => {
-        timer.innerHTML = 'Time is over'
+        timer.innerHTML = 'Время вышло'
     })
 }
 
@@ -67,3 +67,4 @@ window.addEventListener('beforeunload', () => {
     localStorage.setItem('timer', `${timerCheckbox.getAttribute('data-switch')}`);
     localStorage.setItem('timer-period', `${timerStep}`)
 })
+
