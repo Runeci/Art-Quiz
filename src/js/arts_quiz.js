@@ -9,6 +9,7 @@ import {
     shuffle
 } from "./artist_quiz";
 import {buttonCategoryArtsQuiz, makeVisible, removeClass} from "./main";
+import {runTimer, stopTimer, timerStep} from "./settings";
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     const infoArr = data.items;
@@ -39,6 +40,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             currCategoryNum = index;
             setFirstQuizQuestion(arrayParts, index)
             getAnswers(arrayParts, currCategoryNum, currImgNum);
+            runTimer();
         })
     })
 
@@ -59,6 +61,8 @@ loadJson('./assets/json.json').catch(alert).then(data => {
 
         showResult(numberOfAnsweredQuestions, modalResults, modalResultsScore, score)
 
+        runTimer()
+
         if (localStorage.getItem(`arts visited ${currCategoryNum}`) === 'true') {
             createBtnScore(cardArr, currCategoryNum, 'arts')
         }
@@ -78,6 +82,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     btnResult.addEventListener('click', () => {
         makeVisible('arts-category')
         setDefaultValues()
+        stopTimer()
     })
 
 
@@ -109,7 +114,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         console.log(arr[index][num].author)
     }
 
-    function getAnswers (partArr, arrNumber, imageNum) {
+    function getAnswers(partArr, arrNumber, imageNum) {
         const maxIndex = infoArr.length - 1;
         const numberOfAnswers = 4;
         correctAnswer = `url("./assets/images/img/${partArr[arrNumber][imageNum].imageNum}.jpg")`
@@ -130,8 +135,10 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             cont.addEventListener('click', () => {
                 if (cont.style.backgroundImage === correctAnswer) {
                     cont.classList.add('correct')
+                    stopTimer()
                 } else {
                     cont.classList.add('wrong')
+                    stopTimer()
                 }
                 const rightAnswer = document.querySelector('.arts-right-answer')
                 rightAnswer.style.backgroundImage = correctAnswer
@@ -141,11 +148,33 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         })
     }
 
+    const timerArts = document.querySelector('.arts-quiz .timer')
+
+    setInterval(() => {
+        answerAfterTimerEnd(timerArts)
+    }, 1000)
+
+    function answerAfterTimerEnd(timer) {
+        if (timerStep === 0) {
+            arrWithResults.push('false')
+            quizAnswerContainersArr.forEach(cont => {
+                if (cont.style.backgroundImage === correctAnswer) {
+                    console.log('right')
+                    cont.classList.add('correct')
+                    stopTimer()
+                }
+                const rightAnswer = document.querySelector('.arts-right-answer')
+                rightAnswer.style.backgroundImage = correctAnswer
+                showModal(modalNext)
+            })
+        }
+    }
+
     buttonCategoryArtsQuiz.addEventListener('click', () => {
         fulfillArrWithAnswers(arrWithResults)
         localStorage.setItem(`arts results ${currCategoryNum}`, `${arrWithResults}`)
         createBtnScore(cardArr, currCategoryNum, 'arts')
         setDefaultValues();
+        stopTimer()
     })
-
 });

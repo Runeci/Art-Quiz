@@ -44,7 +44,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             currCategoryNum = index;
             setFirstQuizImg(arrayParts, index)
             getAnswers(arrayParts, currCategoryNum, currImgNum);
-            // countdown()
+
             runTimer()
 
         })
@@ -65,7 +65,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         numberOfAnsweredQuestions++
         showResult(numberOfAnsweredQuestions, modalResults, modalResultsScore, score)
 
-        // countdown()
         runTimer()
 
         if (localStorage.getItem(`artist visited ${currCategoryNum}`) === 'true') {
@@ -81,7 +80,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             quizQuestionsNumArr[currImgNum].classList.add('correct')
         } else {
             arrWithResults.push('false')
-            console.log('false results')
             quizQuestionsNumArr[currImgNum].classList.add('wrong')
         }
     })
@@ -152,14 +150,13 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         })
     }
 
+    const timerArtist = document.querySelector('.artist-quiz .timer')
 
-    timers.forEach(timer => {
-        setInterval(() => {
-            z(timer)
-        }, 1000)
-    })
+    setInterval(() => {
+        answerAfterTimerEnd(timerArtist)
+    }, 1000)
 
-    function z(timer) {
+    function answerAfterTimerEnd(timer) {
         if (timerStep === 0) {
             arrWithResults.push('false')
             quizAnswerContainersArr.forEach(cont => {

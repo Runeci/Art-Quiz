@@ -1,4 +1,4 @@
-import {timerStep} from "./settings";
+import {stopTimer, timerStep} from "./settings";
 
 export const wrapper = document.querySelector('.wrapper ')
 export const buttonArtist = document.querySelector(".main__artist-btn");
@@ -53,6 +53,7 @@ buttonHomeArr.forEach(button => {
     button.addEventListener('click', () => {
         wrapper.style.backgroundImage = 'url("./assets/images/main-img.jpg")'
         makeVisible('main')
+        stopTimer()
     })
 })
 
