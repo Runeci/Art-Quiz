@@ -58,6 +58,44 @@
   gap: 20px;
 }
 
+.main__settings-btn {
+  position: relative;
+}
+
+.main__settings-btn svg {
+  position: absolute;
+  fill: white;
+}
+
+.main__settings-btn svg {
+  position: absolute;
+  fill: white;
+  top: 12px;
+  left: 5px;
+  transition-property: transform;
+}
+
+.main__settings-btn svg {
+
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+
+.main__settings-btn:hover {
+  svg {
+    -webkit-animation: rotation 5s infinite linear;
+    fill: $main-color;
+  }
+}
+
 .logo {
   display: flex;
   gap: 20px;
@@ -79,7 +117,7 @@
   left: 0;
   width: 100%;
   padding: 15px;
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
 }
 
