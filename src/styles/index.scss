@@ -54,16 +54,26 @@ button {
 
 
 // VARIABLES
-
-
 $main-color: black;
 $accent-color: #FFBCA2;
 $font-color: #FFFFFF;
 $height: 60px;
-
-
-
 // INITIAL
+
+
+
+:root {
+  --color-page-background: #{$main-color};
+  --color-text: #{$font-color};
+}
+
+
+
+.dark {
+  --color-page-background: #{$font-color};
+  --color-text: #{$main-color};
+}
+
 
 
 body {
@@ -74,6 +84,12 @@ body {
   line-height: 28px;
   letter-spacing: -0.4px;
   color: $font-color;
+}
+
+
+body {
+  background-color: var(--color-page-background);
+  color: var(--color-text);
 }
 
 h2 {
