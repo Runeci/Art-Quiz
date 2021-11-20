@@ -9,7 +9,7 @@ import {
     shuffle
 } from "./artist_quiz";
 import {buttonCategoryArtsQuiz, makeVisible, removeClass} from "./main";
-import {runTimer, stopTimer, timerStep} from "./settings";
+import {playCorrectAudio, playWrongAudio, runTimer, stopTimer, timerStep} from "./settings";
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     const infoArr = data.items;
@@ -65,6 +65,10 @@ loadJson('./assets/json.json').catch(alert).then(data => {
 
         if (localStorage.getItem(`arts visited ${currCategoryNum}`) === 'true') {
             createBtnScore(cardArr, currCategoryNum, 'arts')
+        }
+
+        if (numberOfAnsweredQuestions === numberOfQuestions) {
+            stopTimer()
         }
     })
 
@@ -135,9 +139,11 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             cont.addEventListener('click', () => {
                 if (cont.style.backgroundImage === correctAnswer) {
                     cont.classList.add('correct')
+                    playCorrectAudio()
                     stopTimer()
                 } else {
                     cont.classList.add('wrong')
+                    playWrongAudio()
                     stopTimer()
                 }
                 const rightAnswer = document.querySelector('.arts-right-answer')

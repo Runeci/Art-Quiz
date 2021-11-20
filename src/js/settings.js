@@ -2,14 +2,25 @@ import {showModal} from "./artist_quiz";
 
 const toggleButton = document.querySelector('.timer__switch')
 const timerInput = document.querySelector('.timer__range')
-export const timers = document.querySelectorAll('.timer')
+const timerLabel = document.querySelector('.timer-label')
+const timers = document.querySelectorAll('.timer')
 const timerCheckbox = document.querySelector('.timer__switch input')
 
-function checkState(){
+const volumeContainer = document.querySelector('.settings__volume')
+const volumeInput = document.querySelector('.volume-input')
+const volumeLabel = document.querySelector('.volume-label')
+let volumeValue;
+
+
+// TIMER
+
+function checkState() {
     if (!localStorage.getItem('timer-period')) {
         timerInput.value = '5'
+        timerLabel.innerHTML = '5'
     } else {
         timerInput.value = `${localStorage.getItem('timer-period')}`
+        timerLabel.innerHTML = `${localStorage.getItem('timer-period')} с`
     }
 
     if (!localStorage.getItem('timer')) {
@@ -17,13 +28,27 @@ function checkState(){
     } else {
         const status = localStorage.getItem('timer')
         timerCheckbox.setAttribute('data-switch', `${status}`)
+        if (localStorage.getItem('timer') === 'on') {
+            timerCheckbox.setAttribute('checked', 'checked')
+        }
+    }
+
+    if (!localStorage.getItem('volume')) {
+        volumeValue = 0.5
+        volumeInput.value = 0.5 * 100
+        volumeLabel.innerHTML = `${volumeValue}`
+    } else {
+        volumeValue = localStorage.getItem('volume')
+        volumeInput.value = volumeValue
+        volumeLabel.innerHTML = `${volumeValue}`
     }
 }
+
 checkState()
 
 
 toggleButton.addEventListener('click', e => {
-    if(e.target.getAttribute('data-switch') === 'off') {
+    if (e.target.getAttribute('data-switch') === 'off') {
         e.target.setAttribute('data-switch', 'on')
     } else {
         e.target.setAttribute('data-switch', 'off')
@@ -32,6 +57,7 @@ toggleButton.addEventListener('click', e => {
 
 timerInput.addEventListener('change', (e) => {
     timerStep = parseInt(e.target.value, 10);
+    timerLabel.innerHTML = `${timerStep} с`
 })
 
 export function runTimer() {
@@ -43,19 +69,19 @@ export function runTimer() {
 let timer;
 export let timerStep = parseInt(timerInput.value, 10);
 
-export function countdown(){
+export function countdown() {
     timers.forEach(timer => {
         timer.innerHTML = timerStep
     })
     timerStep--;
-    if (timerStep < 0){
+    if (timerStep < 0) {
         stopTimer()
     } else {
         timer = setTimeout(countdown, 1000);
     }
 }
 
- export function stopTimer() {
+export function stopTimer() {
     clearTimeout(timer);
     timerStep = parseInt(timerInput.value, 10);
     timers.forEach(timer => {
@@ -66,5 +92,32 @@ export function countdown(){
 window.addEventListener('beforeunload', () => {
     localStorage.setItem('timer', `${timerCheckbox.getAttribute('data-switch')}`);
     localStorage.setItem('timer-period', `${timerStep}`)
+    localStorage.setItem('volume', `${volumeValue}`)
+})
+
+
+//MUSIC
+
+export function playCorrectAudio() {
+    let audio = new Audio('./../assets/sounds/correct-answer-sound.mp3')
+    audio.volume = parseInt(volumeValue, 10) / 100
+    audio.play()
+}
+
+export function playWrongAudio() {
+    let audio = new Audio('./../assets/sounds/wrong-answer-sound.mp3')
+    audio.volume = parseInt(volumeValue, 10) / 100
+    audio.play()
+}
+
+export function playWinAudio() {
+    let audio = new Audio('./../assets/sounds/win.mp3')
+    audio.volume = parseInt(volumeValue, 10) / 100
+    audio.play()
+}
+
+volumeInput.addEventListener('change', (e) => {
+    volumeLabel.innerHTML = e.target.value;
+    volumeValue = e.target.value;
 })
 

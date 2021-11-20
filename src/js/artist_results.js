@@ -1,6 +1,7 @@
 import {loadJson} from "./artist";
-import {divideIntoParts} from "./artist_quiz";
+import {divideIntoParts, hideModal, showModal} from "./artist_quiz";
 import {makeVisible} from "./main";
+import {stopTimer} from "./settings";
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     const infoArr = data.items;
@@ -24,6 +25,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         card.addEventListener('click', (e) => {
             if (e.target.hasAttribute('data-btn-number')) {
                 makeVisible('artists-results')
+                stopTimer()
                 let index = e.target.getAttribute('data-btn-number')
                 arrayParts[index].forEach((card, i) => {
                     createResultCards(index, i)
@@ -32,9 +34,18 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                 const z = localStorage.getItem(`artist results ${index}`).split(',')
                 const cards = document.querySelectorAll('.result-card')
 
+                const resultModal = document.querySelector('.artist-result__modal')
+                const resultAuthor = document.querySelector('.artist-result__author')
+                const resultName = document.querySelector('.artist-result__name')
+                const resultYear = document.querySelector('.artist-result__year')
+
+
+
                 cards.forEach((card, i) =>
                     card.addEventListener('click', () => {
-                        showInfo(arrayParts, index, i)
+                        showInfo(arrayParts, index, i, resultAuthor, resultYear, resultName)
+                        showModal(resultModal)
+
                     }))
 
                 z.forEach((item, index) => {
@@ -52,14 +63,16 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         resultCard.style.backgroundImage = `url("./assets/images/img/${arrayParts[arrPartsInd][objInd].imageNum}.jpg")`
         artistsResults.append(resultCard)
     }
+
+
 });
 
 export function clearHTML(container) {
     container.innerHTML = '';
 }
 
-export function showInfo(arrayParts, arrPartsInd, objInd) {
-    console.log(arrayParts[arrPartsInd][objInd].author)
-    console.log(arrayParts[arrPartsInd][objInd].year)
-    console.log(arrayParts[arrPartsInd][objInd].name)
+export function showInfo(arrayParts, arrPartsInd, objInd, authorName, year, name) {
+    authorName.innerHTML = `${arrayParts[arrPartsInd][objInd].author}`
+    year.innerHTML = `${arrayParts[arrPartsInd][objInd].year}`
+    name.innerHTML = `${arrayParts[arrPartsInd][objInd].name}`
 }

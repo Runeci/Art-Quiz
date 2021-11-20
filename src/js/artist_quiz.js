@@ -5,7 +5,13 @@ import {
     makeVisible,
     removeClass
 } from "./main";
-import {timerStep, checkTimerState, countdown, stopTimer, timers, runTimer} from "./settings";
+import {
+    timerStep,
+    stopTimer,
+    runTimer,
+    playCorrectAudio,
+    playWrongAudio, playWinAudio
+} from "./settings";
 
 export const numberOfQuestions = 10;
 
@@ -30,9 +36,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     let currCategoryNum; // current category card number
     let numberOfAnsweredQuestions = 0;
 
-    const timerCheckbox = document.querySelector('.timer__switch input')
-
-
     divideIntoParts(infoArr, arrayParts);
 
 
@@ -42,11 +45,10 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         }
         card.addEventListener('click', () => {
             currCategoryNum = index;
-            setFirstQuizImg(arrayParts, index)
+            setFirstQuizImg(arrayParts, index);
             getAnswers(arrayParts, currCategoryNum, currImgNum);
-
-            runTimer()
-
+            runTimer();
+            localStorage.setItem(`card artist ${index}`, '0');
         })
     })
 
@@ -71,6 +73,9 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             createBtnScore(cardArr, currCategoryNum, 'artist')
         }
 
+        if (numberOfAnsweredQuestions === numberOfQuestions) {
+            stopTimer()
+        }
     })
 
     quizAnswersContainer.addEventListener('click', e => { // get total score
@@ -138,9 +143,11 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             cont.addEventListener('click', () => {
                 if (cont.innerHTML === correctAnswer) {
                     cont.classList.add('correct')
+                    playCorrectAudio()
                     stopTimer()
                 } else {
                     cont.classList.add('wrong')
+                    playWrongAudio()
                     stopTimer()
                 }
                 modalContent.textContent = `правильный ответ: ${correctAnswer}`
@@ -159,6 +166,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     function answerAfterTimerEnd(timer) {
         if (timerStep === 0) {
             arrWithResults.push('false')
+            playWrongAudio()
             quizAnswerContainersArr.forEach(cont => {
                 if (cont.innerHTML === correctAnswer) {
                     cont.classList.add('correct')
@@ -184,6 +192,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     buttonCategoryArtistQuiz.addEventListener('click', () => {
         fulfillArrWithAnswers(arrWithResults)
         localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
+        console.log(score)
         createBtnScore(cardArr, currCategoryNum, 'artist')
         setDefaultValues();
         stopTimer()
@@ -195,7 +204,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
             createBtnScore(cardArr, currCategoryNum, 'artist')
             setDefaultValues();
-            console.log('buttons home artist')
             stopTimer()
         })
     })
@@ -241,6 +249,7 @@ export function fulfillArrWithAnswers(resArr) {
 
 export function showResult(answeredQuestions, modal, modalScore, totalScore) {
     if (answeredQuestions === numberOfQuestions) {
+        playWinAudio()
         showModal(modal)
         modalScore.innerHTML = `${totalScore} / ${numberOfQuestions}`
     }

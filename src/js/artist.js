@@ -75,7 +75,6 @@ export function createBtnScore(cardArr, currCategoryCard, categoryName) {
     let score = localStorage.getItem(`card ${categoryName} ${currCategoryCard}`) || 0;
     btn.innerHTML = `${score} / ${numberOfQuestions}`;
     cardArr[currCategoryCard].append(btn)
-
 }
 
 export function setLocalStorage(cardArr, attr, categoryName) {

@@ -1,9 +1,14 @@
+.settings {
+  max-width: 300px;
+  width: 100%;
+}
+
 //SWITCH
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 30px;
+  height: 18px;
 }
 
 .switch input {
@@ -27,8 +32,8 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 10px;
+  width: 10px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -45,14 +50,14 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 20px;
 }
 
 .slider.round:before {
@@ -67,3 +72,34 @@ input:checked + .slider:before {
   color: $accent-color;
   font-weight: 900;
 }
+
+
+.timer-up,
+.volume-up {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.timer__switch,
+.volume__switch{
+  margin-top: 10px;
+}
+
+.settings__content {
+  margin-top: calc(#{$height} * 2);
+}
+
+.volume-label {
+  padding-left: 5px;
+}
+
+.timer__title,
+.volume__title {
+  color: $accent-color;
+  font-weight: 600;
+}
+
+
+
