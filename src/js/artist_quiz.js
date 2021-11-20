@@ -49,6 +49,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
             getAnswers(arrayParts, currCategoryNum, currImgNum);
             runTimer();
             localStorage.setItem(`card artist ${index}`, '0');
+            setDefaultValues();
         })
     })
 
@@ -192,7 +193,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     buttonCategoryArtistQuiz.addEventListener('click', () => {
         fulfillArrWithAnswers(arrWithResults)
         localStorage.setItem(`artist results ${currCategoryNum}`, `${arrWithResults}`)
-        console.log(score)
         createBtnScore(cardArr, currCategoryNum, 'artist')
         setDefaultValues();
         stopTimer()

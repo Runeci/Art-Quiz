@@ -72,7 +72,7 @@
 
 .arts-card:hover,
 .artist-card:hover {
-  .arts-img:hover,
+  .arts-card__img:hover,
   .artist-card__img {
     opacity: 0.5;
   }
@@ -80,7 +80,6 @@
   .artist-card__question {
     color: $accent-color;
   }
-
 }
 
 .card-btn-arts,

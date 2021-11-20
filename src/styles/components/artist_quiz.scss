@@ -148,6 +148,7 @@
 
 
 /* Модальное содержание */
+.arts-result__modal,
 .artist-result__modal,
 .modal-arts-content,
 .modal-content {
@@ -169,15 +170,18 @@
   color: $main-color;
 }
 
+.modal-results__next,
 .arts-quiz__next,
 .artist-quiz__next {
   text-align: center;
   border-radius: 60px;
   background-color: $accent-color;
   padding: 10px;
+  border: 1px solid transparent;
   color: $main-color;
 }
 
+.modal-results__next:hover,
 .arts-quiz__next:hover,
 .artist-quiz__next:hover {
   border: 1px solid black;

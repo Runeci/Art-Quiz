@@ -1,7 +1,8 @@
 import {loadJson} from "./artist";
 import {divideIntoParts} from "./artist_quiz";
 import {buttonCategoryArtsRes, makeVisible} from "./main";
-import {clearHTML} from "./artist_results";
+import {clearHTML, showInfo} from "./artist_results";
+import {stopTimer} from "./settings";
 
 
 loadJson('./assets/json.json').catch(alert).then(data => {
@@ -26,14 +27,34 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         card.addEventListener('click', (e) => {
             if (e.target.hasAttribute('data-btn-number')) {
                 makeVisible('arts-results')
+                stopTimer()
                 let index = e.target.getAttribute('data-btn-number')
                 arrayParts[index].forEach((card, i) => {
                     createResultCards(index, i)
                 })
                 const z = localStorage.getItem(`arts results ${index}`).split(',')
                 const cards = document.querySelectorAll('.result-card')
+
+                const resultModal = document.querySelector('.arts-result__modal')
+                const resultAuthor = document.querySelector('.arts-result__author')
+                const resultName = document.querySelector('.arts-result__name')
+                const resultYear = document.querySelector('.arts-result__year')
+                const overlay = document.querySelector('.arts-overlay')
+
+
+                cards.forEach((card, i) =>
+                    card.addEventListener('click', () => {
+                        showInfo(arrayParts, index, i, resultAuthor, resultYear, resultName)
+                        overlay.style.display = 'block';
+                        resultModal.style.top = '50%';
+                    }))
+
+                overlay.addEventListener('click', () => {
+                    resultModal.style.top = '-100%';
+                    overlay.style.display = 'none';
+                })
+
                 z.forEach((item, index) => {
-                    console.log(cards[index])
                     if (item === 'true') {
                         cards[index].classList.remove('wrong-answer')
                     }

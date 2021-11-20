@@ -13,7 +13,7 @@ export const buttonsCategoryHome = document.querySelectorAll('.button-home-artis
 export const buttonCategoryArtistRes = document.querySelector('.button-category-artist-res')
 
 export const buttonCategoryArtsQuiz = document.querySelector('.button-category-arts')
-export const buttonsCategoryHomeArts = document.querySelectorAll('.button-home-arts')
+export const buttonsCategoryHomeArts = document.querySelector('.button-home-arts')
 export const buttonCategoryArtsRes = document.querySelector('.button-category-arts-res')
 
 
@@ -64,7 +64,6 @@ buttonCategoryArtistQuiz.addEventListener('click', () => {
 buttonCategoryArtistRes.addEventListener('click', () => {
     makeVisible('artist-category')
 })
-
 
 buttonCategoryArtsQuiz.addEventListener('click', () => {
     makeVisible('arts-category')

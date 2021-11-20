@@ -38,15 +38,21 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                 const resultAuthor = document.querySelector('.artist-result__author')
                 const resultName = document.querySelector('.artist-result__name')
                 const resultYear = document.querySelector('.artist-result__year')
+                const overlay = document.querySelector('.artist-overlay')
 
 
 
                 cards.forEach((card, i) =>
                     card.addEventListener('click', () => {
                         showInfo(arrayParts, index, i, resultAuthor, resultYear, resultName)
-                        showModal(resultModal)
-
+                        resultModal.style.top = '50%';
+                        overlay.style.display = 'block';
                     }))
+
+                    overlay.addEventListener('click', () => {
+                        resultModal.style.top = '-100%';
+                        overlay.style.display = 'none';
+                    })
 
                 z.forEach((item, index) => {
                     if (item === 'true') {

@@ -8,7 +8,7 @@ import {
     showModal, showResult,
     shuffle
 } from "./artist_quiz";
-import {buttonCategoryArtsQuiz, makeVisible, removeClass} from "./main";
+import {buttonCategoryArtsQuiz, buttonsCategoryHomeArts, makeVisible, removeClass} from "./main";
 import {playCorrectAudio, playWrongAudio, runTimer, stopTimer, timerStep} from "./settings";
 
 loadJson('./assets/json.json').catch(alert).then(data => {
@@ -38,9 +38,11 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         }
         card.addEventListener('click', () => {
             currCategoryNum = index;
-            setFirstQuizQuestion(arrayParts, index)
+            setFirstQuizQuestion(arrayParts, index);
             getAnswers(arrayParts, currCategoryNum, currImgNum);
             runTimer();
+            localStorage.setItem(`card arts ${index}`, '0');
+            setDefaultValues();
         })
     })
 
@@ -85,6 +87,8 @@ loadJson('./assets/json.json').catch(alert).then(data => {
 
     btnResult.addEventListener('click', () => {
         makeVisible('arts-category')
+        localStorage.setItem(`arts results ${currCategoryNum}`, `${arrWithResults}`);
+        createBtnScore(cardArr, currCategoryNum, 'arts')
         setDefaultValues()
         stopTimer()
     })
@@ -179,6 +183,15 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     }
 
     buttonCategoryArtsQuiz.addEventListener('click', () => {
+        fulfillArrWithAnswers(arrWithResults)
+        localStorage.setItem(`arts results ${currCategoryNum}`, `${arrWithResults}`)
+        createBtnScore(cardArr, currCategoryNum, 'arts')
+        setDefaultValues();
+        stopTimer()
+
+    })
+
+    buttonsCategoryHomeArts.addEventListener('click', () => {
         fulfillArrWithAnswers(arrWithResults)
         localStorage.setItem(`arts results ${currCategoryNum}`, `${arrWithResults}`)
         createBtnScore(cardArr, currCategoryNum, 'arts')
