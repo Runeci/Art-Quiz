@@ -49,7 +49,7 @@ export function stopTimer() {
     clearTimeout(timer);
     timerStep = parseInt(timerInput.value, 10);
     timers.forEach(timer => {
-        timer.innerHTML = 'Время вышло'
+        timer.innerHTML = ' '
     })
 }
 
@@ -81,14 +81,60 @@ volumeInput.addEventListener('change', (e) => {
 //LIGHT MODE
 
 const themeBtn = document.querySelector('.settings__theme .toggle')
-const body = document.querySelector('body');
+export const body = document.querySelector('body');
 
 themeBtn.addEventListener('click', () => {
     body.classList.toggle('light')
 })
 
+//LANGUAGE
+
+function changeLanguage() {
+    if (body.classList.contains('english')) {
+        document.querySelector('.main__artist-btn').innerHTML = 'Artists'
+        document.querySelector('.main__art-btn').innerHTML = 'Arts'
+        document.querySelector('.main__settings-btn span').innerHTML = 'Settings'
+        document.querySelector('.artist-category__logo h2').innerHTML = 'Artists'
+        document.querySelector('.main__artist-btn').innerHTML = 'Categories'
+
+        document.querySelectorAll('.button-home').forEach(btn => btn.innerHTML = 'Home')
+
+        document.querySelector('.artist-quiz__logo h2').innerHTML = 'Questions'
+        document.querySelector('.button-category-artist').innerHTML = 'Categories'
 
 
+        document.querySelector('.modal-results__next').innerHTML = 'continue'
+        document.querySelector('.artist-quiz__next').innerHTML = 'continue'
+
+        document.querySelector('.artist-quiz__question').innerHTML = 'Who is the author?'
+        document.querySelector('.artist-result__logo h2').innerHTML = 'Results'
+        document.querySelector('.button-category-artist-res').innerHTML = 'Categories'
+
+
+        document.querySelector('.arts-category__logo h2').innerHTML = 'Categories'
+        document.querySelector('.arts-quiz__logo h2').innerHTML = 'Questions'
+        document.querySelector('.button-category-arts').innerHTML = 'Categories'
+        document.querySelector('.modal-results-arts__next').innerHTML = 'continue'
+        document.querySelector('.arts-quiz__question .question').innerHTML = 'What art is of'
+
+
+        document.querySelector('.modal-arts-inner-text').innerHTML = 'Right answer:'
+        document.querySelector('.arts-quiz__next').innerHTML = 'continue'
+        document.querySelector('.arts-result__logo h2').innerHTML = 'Results'
+        document.querySelector('.button-category-arts-res').innerHTML = 'Categories'
+
+        document.querySelector('.settings__logo h2').innerHTML = 'Settings'
+        document.querySelector('.button-category-arts-res').innerHTML = 'Categories'
+
+        document.querySelector('.volume__title').innerHTML = 'Volume'
+        document.querySelector('.timer__title').innerHTML = 'Timer'
+        document.querySelector('.theme__title').innerHTML = 'Light mode'
+
+        document.querySelector('.author').innerHTML = 'Daryia Kastsianok'
+
+    }
+}
+changeLanguage()
 //LOCAL STORAGE
 
 function checkState() {

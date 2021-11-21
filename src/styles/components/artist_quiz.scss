@@ -25,6 +25,10 @@
 .arts-quiz__question,
 .artist-quiz__question {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .artist-quiz__img {
@@ -54,9 +58,6 @@
   margin-bottom: 20px;
 }
 
-.artist-quiz__question,
-.arts-quiz__question {
-}
 
 
 .artist-quiz__answer {

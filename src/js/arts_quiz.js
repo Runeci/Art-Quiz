@@ -9,7 +9,7 @@ import {
     shuffle
 } from "./artist_quiz";
 import {buttonCategoryArtsQuiz, buttonsCategoryHomeArts, makeVisible, removeClass} from "./main";
-import {playCorrectAudio, playWrongAudio, runTimer, stopTimer, timerStep} from "./settings";
+import {body, playCorrectAudio, playWrongAudio, runTimer, stopTimer, timerStep} from "./settings";
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     const infoArr = data.items;
@@ -112,14 +112,23 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     }
 
     function setFirstQuizQuestion(arr, index) {
-        const question = document.querySelector('.arts-quiz__question')
-        question.innerHTML = `Какую картину написал(а) ${arr[index][0].author}?`
+        const question = document.querySelector('.arts-quiz__question .name')
+
+        if(body.classList.contains('english')){
+            question.innerHTML = `${arr[index][0].en.author}?`
+        } else {
+            question.innerHTML = `${arr[index][0].author}?`
+        }
     }
 
     function setQuestion(arr, index, num) {
-        const question = document.querySelector('.arts-quiz__question')
-        question.innerHTML = `Какую картину написал(а) ${arr[index][num].author}?`
-        console.log(arr[index][num].author)
+        const question = document.querySelector('.arts-quiz__question .name')
+
+        if(body.classList.contains('english')){
+            question.innerHTML = `${arr[index][num].en.author}?`
+        } else {
+            question.innerHTML = `${arr[index][num].author}?`
+        }
     }
 
     function getAnswers(partArr, arrNumber, imageNum) {

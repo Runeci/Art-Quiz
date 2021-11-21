@@ -11,6 +11,8 @@ export async function loadJson(path) { // (1)
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     const infoArr = data.items;
+
+    console.log(infoArr[0].en.author)
     makeCategoryCard('artist-category__categories', 'artist', 0, infoArr, 10)
     const cardArr = document.querySelectorAll('.artist-card')
     const imgArr = document.querySelectorAll('.artist-card__img')

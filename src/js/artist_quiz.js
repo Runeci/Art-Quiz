@@ -10,7 +10,7 @@ import {
     stopTimer,
     runTimer,
     playCorrectAudio,
-    playWrongAudio, playWinAudio
+    playWrongAudio, playWinAudio, body
 } from "./settings";
 
 export const numberOfQuestions = 10;
@@ -121,14 +121,28 @@ loadJson('./assets/json.json').catch(alert).then(data => {
     function getAnswers(partArr, arrNumber, imageNum) {
         const maxIndex = infoArr.length - 1;
         const numberOfAnswers = 4;
-        correctAnswer = partArr[arrNumber][imageNum].author;
+        if(body.classList.contains('english')) {
+            correctAnswer = partArr[arrNumber][imageNum].en.author;
+        } else {
+            correctAnswer = partArr[arrNumber][imageNum].author;
+        }
+
         let answersArr = [correctAnswer];
         for (let i = 0; i < numberOfAnswers - 1; i++) {
-            let answer = infoArr[getRandomNum(0, maxIndex)].author
+            let answer;
+            if(body.classList.contains('english')) {
+                 answer = infoArr[getRandomNum(0, maxIndex)].en.author
+            } else {
+                answer = infoArr[getRandomNum(0, maxIndex)].author
+            }
             if (answer !== correctAnswer) {
                 answersArr.push(answer);
             } else {
-                answersArr.push(infoArr[getRandomNum(0, maxIndex)].author)
+                if(body.classList.contains('english')) {
+                    answersArr.push(infoArr[getRandomNum(0, maxIndex)].en.author)
+                } else {
+                    answersArr.push(infoArr[getRandomNum(0, maxIndex)].author)
+                }
             }
         }
         shuffle(answersArr);
@@ -152,6 +166,9 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                     stopTimer()
                 }
                 modalContent.textContent = `правильный ответ: ${correctAnswer}`
+                if(body.classList.contains('english')) {
+                    modalContent.textContent = `right answer: ${correctAnswer}`
+                }
                 quizAnswersContainer.classList.add('disabled')
                 showModal(modalNext)
             })
@@ -175,6 +192,9 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                 }
                 quizQuestionsNumArr[currImgNum].classList.add('wrong')
                 modalContent.textContent = `правильный ответ: ${correctAnswer}`
+                if(body.classList.contains('english')) {
+                    modalContent.textContent = `right answer: ${correctAnswer}`
+                }
                 quizAnswersContainer.classList.add('disabled')
                 showModal(modalNext)
             })
