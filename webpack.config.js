@@ -90,7 +90,7 @@ const plugins = () => {
         new CopyWebpackPlugin([
             {
                 from: path.resolve(__dirname, 'src/assets'),
-                to: path.resolve(__dirname, 'dist/assets')
+                to: path.resolve(__dirname, 'docs/assets')
             }
         ]),
         new MiniCssExtractPlugin({
@@ -113,7 +113,7 @@ module.exports = {
     },
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'docs')
     },
     resolve: {
         extensions: ['.js', '.json', '.png'],
