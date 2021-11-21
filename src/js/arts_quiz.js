@@ -149,7 +149,8 @@ loadJson('./assets/json.json').catch(alert).then(data => {
 
     function checkAnswer() {
         quizAnswerContainersArr.forEach(cont => {
-            cont.addEventListener('click', () => {
+            cont.addEventListener('click', clickHandler);
+            function clickHandler(){
                 if (cont.style.backgroundImage === correctAnswer) {
                     cont.classList.add('correct')
                     playCorrectAudio()
@@ -163,7 +164,8 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                 rightAnswer.style.backgroundImage = correctAnswer
                 quizAnswersContainer.classList.add('disabled')
                 showModal(modalNext)
-            })
+                quizAnswerContainersArr.forEach(i => i.removeEventListener('click', clickHandler))
+            }
         })
     }
 
