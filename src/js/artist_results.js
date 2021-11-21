@@ -1,5 +1,5 @@
 import {loadJson} from "./artist";
-import {divideIntoParts, hideModal, showModal} from "./artist_quiz";
+import {divideIntoParts} from "./artist_quiz";
 import {makeVisible} from "./main";
 import {stopTimer} from "./settings";
 
@@ -21,7 +21,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         clearHTML(artistsResults)
     })
 
-    cardArr.forEach((card, index) => {
+    cardArr.forEach((card) => {
         card.addEventListener('click', (e) => {
             if (e.target.hasAttribute('data-btn-number')) {
                 makeVisible('artists-results')

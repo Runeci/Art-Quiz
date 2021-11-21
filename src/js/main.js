@@ -1,4 +1,4 @@
-import {stopTimer, timerStep} from "./settings";
+import {stopTimer} from "./settings";
 
 export const wrapper = document.querySelector('.wrapper ')
 export const buttonArtist = document.querySelector(".main__artist-btn");

@@ -164,7 +164,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         answerAfterTimerEnd(timerArts)
     }, 1000)
 
-    function answerAfterTimerEnd(timer) {
+    function answerAfterTimerEnd() {
         if (timerStep === 0) {
             arrWithResults.push('false')
             quizAnswerContainersArr.forEach(cont => {

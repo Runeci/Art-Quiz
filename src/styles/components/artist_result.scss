@@ -62,7 +62,7 @@
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: $main-color;
+  background-color: var(--color-page-background);
   position: fixed;
   top: 0;
   left: 0;

@@ -43,7 +43,7 @@
 .arts-card__question,
 .artist-card__question {
   width: 100%;
-  background-color: $main-color;
+  background-color: var(--color-page-background);
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -91,13 +91,13 @@
   font-size: 20px;
   line-height: 20px;
   color: $accent-color;
-  background-color: $main-color;
+  background-color: var(--color-page-background);
   border-radius: 20px;
   padding: 0 5px;
 }
 
 .card-btn-arts:hover,
 .card-btn-artist:hover {
-  background-color: $font-color;
-  color: $main-color;
+  background-color: var(--color-text);
+  color: var(--color-page-background);
 }

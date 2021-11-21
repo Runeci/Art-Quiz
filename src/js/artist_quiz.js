@@ -1,6 +1,6 @@
 import {createBtnScore, loadJson} from "./artist";
 import {
-    buttonCategoryArtistQuiz, buttonCategoryArtistRes, buttonsCategoryArtsRes,
+    buttonCategoryArtistQuiz,
     buttonsCategoryHome,
     makeVisible,
     removeClass
@@ -164,7 +164,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         answerAfterTimerEnd(timerArtist)
     }, 1000)
 
-    function answerAfterTimerEnd(timer) {
+    function answerAfterTimerEnd() {
         if (timerStep === 0) {
             arrWithResults.push('false')
             playWrongAudio()

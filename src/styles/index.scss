@@ -55,7 +55,7 @@ button {
 
 // VARIABLES
 $main-color: black;
-$accent-color: #FFBCA2;
+$accent-color: #e85a4f;
 $font-color: #FFFFFF;
 $height: 60px;
 // INITIAL
@@ -69,7 +69,7 @@ $height: 60px;
 
 
 
-.dark {
+.light {
   --color-page-background: #{$font-color};
   --color-text: #{$main-color};
 }
@@ -78,19 +78,22 @@ $height: 60px;
 
 body {
   font-family: 'Alumni Sans', sans-serif;
-  background-color: $main-color;
+  background-color: var(--color-page-background);
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: -0.4px;
-  color: $font-color;
+  color: var(--color-text);
 }
+
 
 
 body {
   background-color: var(--color-page-background);
   color: var(--color-text);
 }
+
+
 
 h2 {
   color: $accent-color;
@@ -103,7 +106,7 @@ h2 {
 
 .button-main {
   border-radius: 60px;
-  border: 1px solid $font-color;
+  border: 1px solid white;
   padding: 20px 40px;
   text-align: center;
   max-width: 270px;
@@ -111,11 +114,17 @@ h2 {
   cursor: pointer;
 }
 
-.button:hover,
+
 .button-main:hover {
-  color: $main-color;
-  background-color: $font-color;
-  border: 1px solid $font-color;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.button:hover {
+  color: var(--color-page-background);
+  background-color: var(--color-text);
+  border: 1px solid var(--color-text);
 }
 
 .button {
@@ -124,7 +133,7 @@ h2 {
 
 .button:active,
 .button-main:active {
-  color: $main-color;
+  color: var(--color-page-background);
   background-color: $accent-color;
   border: 1px solid $accent-color;
 }
@@ -140,7 +149,7 @@ input[type=range] {
   max-width: 80%;
   width: 100%;
   height: 8px;
-  background: $font-color;
+  background: var(--color-text);
   outline: none;
   opacity: 1;
   -webkit-transition: .2s;

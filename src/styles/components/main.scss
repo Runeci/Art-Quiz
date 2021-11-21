@@ -54,6 +54,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
   gap: 20px;
 }
 
@@ -74,9 +75,6 @@
   transition-property: transform;
 }
 
-.main__settings-btn svg {
-
-}
 
 @-webkit-keyframes rotation {
   from {
@@ -91,7 +89,7 @@
 .main__settings-btn:hover {
   svg {
     -webkit-animation: rotation 5s infinite linear;
-    fill: $main-color;
+    fill: black;
   }
 }
 
@@ -120,6 +118,10 @@
   z-index: 100;
 }
 
+.light .category-header {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .footer {
   width: 100%;
   font-size: 18px;
@@ -136,6 +138,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+
+.rs_logo svg{
+  fill: var(--color-text);
 }
 
 .author:hover {

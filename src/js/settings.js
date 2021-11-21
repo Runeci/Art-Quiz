@@ -1,52 +1,16 @@
-import {showModal} from "./artist_quiz";
-
 const toggleButton = document.querySelector('.timer__switch')
 const timerInput = document.querySelector('.timer__range')
 const timerLabel = document.querySelector('.timer-label')
 const timers = document.querySelectorAll('.timer')
 const timerCheckbox = document.querySelector('.timer__switch input')
 
-const volumeContainer = document.querySelector('.settings__volume')
+// const volumeContainer = document.querySelector('.settings__volume')
 const volumeInput = document.querySelector('.volume-input')
 const volumeLabel = document.querySelector('.volume-label')
 let volumeValue;
 
 
 // TIMER
-
-function checkState() {
-    if (!localStorage.getItem('timer-period')) {
-        timerInput.value = '5'
-        timerLabel.innerHTML = '5'
-    } else {
-        timerInput.value = `${localStorage.getItem('timer-period')}`
-        timerLabel.innerHTML = `${localStorage.getItem('timer-period')} с`
-    }
-
-    if (!localStorage.getItem('timer')) {
-        timerCheckbox.setAttribute('data-switch', 'off')
-    } else {
-        const status = localStorage.getItem('timer')
-        timerCheckbox.setAttribute('data-switch', `${status}`)
-        if (localStorage.getItem('timer') === 'on') {
-            timerCheckbox.setAttribute('checked', 'checked')
-        }
-    }
-
-    if (!localStorage.getItem('volume')) {
-        volumeValue = 0.5
-        volumeInput.value = 0.5 * 100
-        volumeLabel.innerHTML = `${volumeValue}`
-    } else {
-        volumeValue = localStorage.getItem('volume')
-        volumeInput.value = volumeValue
-        volumeLabel.innerHTML = `${volumeValue}`
-    }
-}
-
-checkState()
-
-
 toggleButton.addEventListener('click', e => {
     if (e.target.getAttribute('data-switch') === 'off') {
         e.target.setAttribute('data-switch', 'on')
@@ -89,13 +53,6 @@ export function stopTimer() {
     })
 }
 
-window.addEventListener('beforeunload', () => {
-    localStorage.setItem('timer', `${timerCheckbox.getAttribute('data-switch')}`);
-    localStorage.setItem('timer-period', `${timerStep}`)
-    localStorage.setItem('volume', `${volumeValue}`)
-})
-
-
 //MUSIC
 
 export function playCorrectAudio() {
@@ -121,3 +78,60 @@ volumeInput.addEventListener('change', (e) => {
     volumeValue = e.target.value;
 })
 
+//LIGHT MODE
+
+const themeBtn = document.querySelector('.settings__theme .toggle')
+const body = document.querySelector('body');
+
+themeBtn.addEventListener('click', () => {
+    body.classList.toggle('light')
+})
+
+
+
+//LOCAL STORAGE
+
+function checkState() {
+    if (!localStorage.getItem('timer-period')) {
+        timerInput.value = '5'
+        timerLabel.innerHTML = '5'
+    } else {
+        timerInput.value = `${localStorage.getItem('timer-period')}`
+        timerLabel.innerHTML = `${localStorage.getItem('timer-period')} с`
+    }
+
+    if (!localStorage.getItem('timer')) {
+        timerCheckbox.setAttribute('data-switch', 'off')
+    } else {
+        const status = localStorage.getItem('timer')
+        timerCheckbox.setAttribute('data-switch', `${status}`)
+        if (localStorage.getItem('timer') === 'on') {
+            timerCheckbox.setAttribute('checked', 'checked')
+        }
+    }
+
+    if (!localStorage.getItem('volume')) {
+        volumeValue = 0.5
+        volumeInput.value = 0.5 * 100
+        volumeLabel.innerHTML = `${volumeValue}`
+    } else {
+        volumeValue = localStorage.getItem('volume')
+        volumeInput.value = volumeValue
+        volumeLabel.innerHTML = `${volumeValue}`
+    }
+
+    if (localStorage.getItem('theme-light') === 'true') {
+        body.classList.add('light')
+        document.querySelector('.theme__switch input').setAttribute('checked', 'checked')
+    }
+}
+
+checkState()
+
+
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('timer', `${timerCheckbox.getAttribute('data-switch')}`);
+    localStorage.setItem('timer-period', `${timerStep}`)
+    localStorage.setItem('volume', `${volumeValue}`)
+    localStorage.setItem('theme-light', `${body.classList.contains('light')}`)
+})
