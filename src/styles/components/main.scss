@@ -34,8 +34,7 @@
   align-items: center;
   gap: 30px;
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 0;
 }
 
 .main__header {
@@ -45,9 +44,9 @@
   margin: 0 20px;
 }
 
-.main-header_logo {
-  margin-bottom: 20%;
-}
+//.main-header_logo {
+//  margin-bottom: 20%;
+//}
 
 .main__buttons {
   display: flex;
@@ -140,10 +139,74 @@
   gap: 20px;
 }
 
-.rs_logo svg{
-  fill: var(--color-text);
+
+.rs_logo:hover {
+  cursor: pointer;
+  svg {
+    fill: $accent-color;
+  }
 }
+
+.rs_logo svg {
+  fill: white;
+}
+
+.light .footer {
+  svg {
+    fill: $accent-color;
+  }
+  color: $accent-color;
+}
+
 
 .author:hover {
   color: $accent-color;
 }
+
+//animation logo
+
+$colors: #EFEAC5, white, red, #EFEAC5, white,;
+
+.main-header_logo {
+ height: 300px;
+  font: 16em/1 "Alumni Sans";
+}
+
+.text--line {
+  font-size: 0.5em;
+  font-weight: 700;
+}
+
+.main-header_logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+$max: 5;
+$stroke-step: 100%;
+.text-copy {
+  fill: none;
+  stroke: $accent-color;
+  stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
+  stroke-width: 6px;
+
+  animation: stroke-offset 9s infinite linear;
+
+  @for $item from 1 through $max {
+    $stroke-color: nth($colors, $item);
+
+    &:nth-child(#{$item}) {
+      stroke: $stroke-color;
+      stroke-dashoffset: $stroke-step * $item;
+    }
+  }
+}
+
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: $stroke-step * $max;
+    stroke-dasharray: 0 $stroke-step * $max*2.5;
+  }
+}
+
+
