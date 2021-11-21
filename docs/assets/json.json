@@ -1,0 +1,2406 @@
+{
+"items":
+[
+  {
+    "author": "Павел Федотов",
+    "name": "Сватовство майора",
+    "year": "1852",
+    "imageNum": "0",
+    "en": {
+      "author": "Pavel Fedotov",
+      "name": "The Major Makes a Proposal"
+    }
+  },
+  {
+    "author": "Эдгар Дега",
+    "name": "Голубые танцовщицы",
+    "year": "1897",
+    "imageNum": "1",
+    "en": {
+      "author": "Edgar Degas",
+      "name": "Blue Dancers"
+    }
+  },
+  {
+    "author": "Веронезе",
+    "name": "Пир в доме Левия",
+    "year": "1563",
+    "imageNum": "2",
+    "en": {
+      "author": "Veronese",
+      "name": "Feast in the House of Levi"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Иван Грозный и сын его Иван",
+    "year": "1885",
+    "imageNum": "3",
+    "en": {
+      "author": "Ilyia Repin",
+      "name": "Ivan the Terrible killed his son "
+    }
+  },
+  {
+    "author": "Константин Маковский",
+    "name": "Портрет графини Софьи",
+    "year": "1890",
+    "imageNum": "4",
+    "en": {
+      "author": "Konstantin Makovsky",
+      "name": "Portrait of Tsarevna Sofia"
+    }
+  },
+  {
+    "author": "Василий Перов",
+    "name": "Приезд гувернантки в купеческий дом",
+    "year": "1866",
+    "imageNum": "5",
+    "en": {
+      "author": "Vasyliy Perov",
+      "name": "Arrival of the governess in a merchant's house"
+    }
+  },
+  {
+    "author": "Микеланджело",
+    "name": "Сотворение Адама",
+    "year": "1511",
+    "imageNum": "6",
+    "en": {
+      "author": "Michelangelo",
+      "name": "Creation of Adam"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Прогулка в Булонском лесу",
+    "year": "1873",
+    "imageNum": "7",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Walk in the Bois de Boulogne"
+    }
+  },
+  {
+    "author": "Ян Вермеер",
+    "name": "Хозяйка и служанка",
+    "year": "1667",
+    "imageNum": "8",
+    "en": {
+      "author": "Jan Vermeer ",
+      "name": "Mistress and maid"
+    }
+  },
+  {
+    "author": "Василий Поленов",
+    "name": "Московский дворик",
+    "year": "1877",
+    "imageNum": "9",
+    "en": {
+      "author": "Vassily Polenov",
+      "name": "The Moscow Courtyard"
+    }
+  },
+  {
+    "author": "Фёдор Васильев",
+    "name": "Мокрый луг",
+    "year": "1872",
+    "imageNum": "10",
+    "en": {
+      "author": "Fedor Vasiliev",
+      "name": "Wet meadow"
+    }
+  },
+  {
+    "author": "Ilia Repin",
+    "name": "Проводы новобранца",
+    "year": "1879",
+    "imageNum": "11",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Seeing off the recruit"
+    }
+  },
+  {
+    "author": "Веронезе",
+    "name": "Марс и Венера",
+    "year": "1560",
+    "imageNum": "12",
+    "en": {
+      "author": "Veronese",
+      "name": "Mars and Venus"
+    }
+  },
+  {
+    "author": "Виктор Васнецов",
+    "name": "Аленушка",
+    "year": "1881",
+    "imageNum": "13",
+    "en": {
+      "author": "Viktor Vasnetsov",
+      "name": "Alyonushka"
+    }
+  },
+  {
+    "author": "Клод Лоррен",
+    "name": "Отплытие святой Урсулы",
+    "year": "1614",
+    "imageNum": "14",
+    "en": {
+      "author": "Claude Lorrain",
+      "name": "Departure of saint Ursula"
+    }
+  },
+  {
+    "author": "Ilia Repin",
+    "name": "Вечорници",
+    "year": "1881",
+    "imageNum": "15",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Vechornici"
+    }
+  },
+  {
+    "author": "Жан Фрагонар",
+    "name": "Качели",
+    "year": "1767",
+    "imageNum": "16",
+    "en": {
+      "author": "Jean Fragonard",
+      "name": "Swing"
+    }
+  },
+  {
+    "author": "Архип Куинджи",
+    "name": "Берёзовая роща",
+    "year": "1879",
+    "imageNum": "17",
+    "en": {
+      "author": "Arkhip Kuindzhi",
+      "name": "Birch Grove"
+    }
+  },
+  {
+    "author": "Пабло Пикассо",
+    "name": "Герника",
+    "year": "1937",
+    "imageNum": "18",
+    "en": {
+      "author": "Pablo Picasso",
+      "name": "Guernica"
+    }
+  },
+  {
+    "author": "Поль Гоген",
+    "name": "Откуда мы пришли? Кто мы? Куда мы идём?",
+    "year": "1898",
+    "imageNum": "19",
+    "en": {
+      "author": "Paul Gauguin",
+      "name": "Where did we come from? Who are we? Where are we going?"
+    }
+  },
+  {
+    "author": "Бартоломео Мурильо",
+    "name": "Мадонна с четками",
+    "year": "1655",
+    "imageNum": "20",
+    "en": {
+      "author": "Bartolomeo Murillo",
+      "name": "Madonna of the Rosary"
+    }
+  },
+  {
+    "author": "Питер Брейгель",
+    "name": "Фламандские пословицы",
+    "year": "1559",
+    "imageNum": "21",
+    "en": {
+      "author": "Pieter Bruegel",
+      "name": "Flemish proverbs"
+    }
+  },
+  {
+    "author": "Ян ван Эйк",
+    "name": "Портрет четы Арнольфини",
+    "year": "1434",
+    "imageNum": "22",
+    "en": {
+      "author": "Jan van Eyck",
+      "name": "Portrait of the Arnolfini couple"
+    }
+  },
+  {
+    "author": "Питер Брейгель",
+    "name": "Избиение младенцев",
+    "year": "1567",
+    "imageNum": "23",
+    "en": {
+      "author": "Pieter Bruegel",
+      "name": "Massacre of the innocents"
+    }
+  },
+  {
+    "author": "Константин Маковский",
+    "name": "Дети, бегущие от грозы",
+    "year": "1872",
+    "imageNum": "24",
+    "en": {
+      "author": "Konstantin Makovsky",
+      "name": "Children running from a thunderstorm"
+    }
+  },
+  {
+    "author": "Рембрант",
+    "name": "Даная",
+    "year": "1647",
+    "imageNum": "25",
+    "en": {
+      "author": "Rembrandt",
+      "name": "Danae"
+    }
+  },
+  {
+    "author": "Рафаель",
+    "name": "Мадонна в кресле",
+    "year": "1514",
+    "imageNum": "26",
+    "en": {
+      "author": "Raphael",
+      "name": "Madonna in the chair"
+    }
+  },
+  {
+    "author": "Василий Суриков",
+    "name": "Взятие снежного городка",
+    "year": "1891",
+    "imageNum": "27",
+    "en": {
+      "author": "Vasily Surikov",
+      "name": "Taking a snow town"
+    }
+  },
+  {
+    "author": "Иван Шишкин",
+    "name": "Ручей в берёзовом лесу",
+    "year": "1883",
+    "imageNum": "28",
+    "en": {
+      "author": "Ivan Shishkin",
+      "name": "A stream in a birch forest"
+    }
+  },
+  {
+    "author": "Василий Суриков",
+    "name": "Покорение Сибири Ермаком Тимофеевичем",
+    "year": "1895",
+    "imageNum": "29",
+    "en": {
+      "author": "Vasily Surikov",
+      "name": "The conquest of Siberia by Ermak Timofeevich"
+    }
+  },
+  {
+    "author": "Владимир Боровиковский",
+    "name": "Портрет Лопухиной",
+    "year": "1797",
+    "imageNum": "30",
+    "en": {
+      "author": "Vladimir Borovikovsky",
+      "name": "Portrait of Lopukhina"
+    }
+  },
+  {
+    "author": "Рене Магритт",
+    "name": "Сын человеческий",
+    "year": "1964",
+    "imageNum": "31",
+    "en": {
+      "author": "Rene Magritte",
+      "name": "Son of a human"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Венера с зеркалом",
+    "year": "1651",
+    "imageNum": "32",
+    "en": {
+      "author": "Velazquez",
+      "name": "Venus with a mirror"
+    }
+  },
+  {
+    "author": "Иван Богданов",
+    "name": "За расчётом",
+    "year": "1890",
+    "imageNum": "33",
+    "en": {
+      "author": "Ivan Bogdanov",
+      "name": "For the calculation"
+    }
+  },
+  {
+    "author": "Рембрандт",
+    "name": "Христос и грешница",
+    "year": "1644",
+    "imageNum": "34",
+    "en": {
+      "author": "Rembrandt",
+      "name": "Christ and the sinner"
+    }
+  },
+  {
+    "author": "Джон Уильям Уотерхаус",
+    "name": "Волшебница Шалот",
+    "year": "1888",
+    "imageNum": "35",
+    "en": {
+      "author": "John William Waterhouse",
+      "name": "Sorceress Shallot"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Большие купальщицы",
+    "year": "1887",
+    "imageNum": "36",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Big bathers"
+    }
+  },
+  {
+    "author": "Бартоломео Мурильо",
+    "name": "Мальчик с собакой",
+    "year": "1650",
+    "imageNum": "37",
+    "en": {
+      "author": "Bartolomeo Murillo",
+      "name": "Boy with dog"
+    }
+  },
+  {
+    "author": "Василий Перов",
+    "name": "Тройка",
+    "year": "1866",
+    "imageNum": "38",
+    "en": {
+      "author": "Vasily Perov",
+      "name": "Troika"
+    }
+  },
+  {
+    "author": "Николай Богданов-Бельский",
+    "name": "Устный счёт",
+    "year": "1895",
+    "imageNum": "39",
+    "en": {
+      "author": "Nikolay Bogdanov-Belsky",
+      "name": "Verbal counting"
+    }
+  },
+  {
+    "author": "Виктор Васнецов",
+    "name": "Три царевны подземного царства",
+    "year": "1884",
+    "imageNum": "40",
+    "en": {
+      "author": "Viktor Vasnetsov",
+      "name": "Three princesses of the underworld"
+    }
+  },
+  {
+    "author": "Анри Матисс",
+    "name": "Танец",
+    "year": "1910",
+    "imageNum": "41",
+    "en": {
+      "author": "Henri Matisse",
+      "name": "Dance"
+    }
+  },
+  {
+    "author": "Эдвард Мунк",
+    "name": "Мадонна",
+    "year": "1894",
+    "imageNum": "42",
+    "en": {
+      "author": "Edvard Munch",
+      "name": "Madonna"
+    }
+  },
+  {
+    "author": "Марк Шагал",
+    "name": "Прогулка",
+    "year": "1918",
+    "imageNum": "43",
+    "en": {
+      "author": "Marc Chagall",
+      "name": "Walk"
+    }
+  },
+  {
+    "author": "Василий Перов",
+    "name": "Сельский крестный ход на Пасхе",
+    "year": "1861",
+    "imageNum": "44",
+    "en": {
+      "author": "Vasily Perov",
+      "name": "Rural religious procession at Easter"
+    }
+  },
+  {
+    "author": "Иероним Босх",
+    "name": "Страшный суд",
+    "year": "1504",
+    "imageNum": "45",
+    "en": {
+      "author": "Hieronymus Bosch",
+      "name": "Last Judgment"
+    }
+  },
+  {
+    "author": "Карл Лемох",
+    "name": "Варька",
+    "year": "1893",
+    "imageNum": "46",
+    "en": {
+      "author": "Karl Lemokh",
+      "name": "Varka"
+    }
+  },
+  {
+    "author": "Жан Фрагонар",
+    "name": "Поцелуй украдкой",
+    "year": "1788",
+    "imageNum": "47",
+    "en": {
+      "author": "Jean Fragonard",
+      "name": "Secret kiss"
+    }
+  },
+  {
+    "author": "Франсуа Буше",
+    "name": "Венера, утешающая Амура",
+    "year": "1751",
+    "imageNum": "48",
+    "en": {
+      "author": "Francois Boucher",
+      "name": "Venus comforting Cupid"
+    }
+  },
+  {
+    "author": "Иван Шишкин",
+    "name": "Корабельная роща",
+    "year": "1898",
+    "imageNum": "49",
+    "en": {
+      "author": "Ivan Shishkin",
+      "name": "Ship Grove"
+    }
+  },
+  {
+    "author": "Густав Климт",
+    "name": "Золотая Адель",
+    "year": "1907",
+    "imageNum": "50",
+    "en": {
+      "author": "Gustav Klimt",
+      "name": "Golden Adele"
+    }
+  },
+  {
+    "author": "Виктор Васнецов",
+    "name": "Богатыри",
+    "year": "1898",
+    "imageNum": "51",
+    "en": {
+      "author": "Viktor Vasnetsov",
+      "name": "Heroes"
+    }
+  },
+  {
+    "author": "Вильгельм фон Каульбах",
+    "name": "Разрушение Иерусалима",
+    "year": "1846",
+    "imageNum": "52",
+    "en": {
+      "author": "Wilhelm von Kaulbach",
+      "name": "Destruction of Jerusalem"
+    }
+  },
+  {
+    "author": "Веронезе",
+    "name": "Брак в Кане Галилейской",
+    "year": "1562",
+    "imageNum": "53",
+    "en": {
+      "author": "Veronese",
+      "name": "Marriage at Cana of Galilee"
+    }
+  },
+  {
+    "author": "Андрей Рублев",
+    "name": "Троица",
+    "year": "1411",
+    "imageNum": "54",
+    "en": {
+      "author": "Andrey Rublev",
+      "name": "Trinity"
+    }
+  },
+  {
+    "author": "Василий Суриков",
+    "name": "Утро стрелецкой казни",
+    "year": "1881",
+    "imageNum": "55",
+    "en": {
+      "author": "Vasily Surikov",
+      "name": "Morning of the Streltsy Execution"
+    }
+  },
+  {
+    "author": "Тициан",
+    "name": "Вакханалия",
+    "year": "1526",
+    "imageNum": "56",
+    "en": {
+      "author": "Titian",
+      "name": "Bacchanalia"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Вилла Медичи в Риме. Полдень",
+    "year": "1630",
+    "imageNum": "57",
+    "en": {
+      "author": "Velasquez",
+      "name": "Villa Medici in Rome. Noon"
+    }
+  },
+  {
+    "author": "Эдуард Мане",
+    "name": "Ланч на траве",
+    "year": "1863",
+    "imageNum": "58",
+    "en": {
+      "author": "Edouard Manet",
+      "name": "Lunch on the grass"
+    }
+  },
+  {
+    "author": "Сальвадор Дали",
+    "name": "Постоянство памяти",
+    "year": "1931",
+    "imageNum": "59",
+    "en": {
+      "author": "Salvador Dali",
+      "name": "Memory persistence"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Две девушки",
+    "year": "1892",
+    "imageNum": "60",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Two girls"
+    }
+  },
+  {
+    "author": "Александр Маковский",
+    "name": "Надоела",
+    "year": "1897",
+    "imageNum": "61",
+    "en": {
+      "author": "Alexander Makovsky",
+      "name": "Tired of"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Менины",
+    "year": "1656",
+    "imageNum": "62",
+    "en": {
+      "author": "Velasquez",
+      "name": "Meninas"
+    }
+  },
+  {
+    "author": "Антонис ван Дейк",
+    "name": "Самсон и Далила",
+    "year": "1628",
+    "imageNum": "63",
+    "en": {
+      "author": "Anthony van Dyck",
+      "name": "Samson and Delilah"
+    }
+  },
+  {
+    "author": "Пабло Пикассо",
+    "name": "Девочка на шаре",
+    "year": "1905",
+    "imageNum": "64",
+    "en": {
+      "author": "Pablo Picasso",
+      "name": "Girl on the ball"
+    }
+  },
+  {
+    "author": "Джованни Беллини",
+    "name": "Пир богов",
+    "year": "1514",
+    "imageNum": "65",
+    "en": {
+      "author": "Giovanni Bellini",
+      "name": "Feast of the Gods"
+    }
+  },
+  {
+    "author": "Леонардо да Винчи",
+    "name": "Дама с горностаем",
+    "year": "1490",
+    "imageNum": "66",
+    "en": {
+      "author": "Leonardo da Vinci",
+      "name": "Lady with an Ermine"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Бахус",
+    "year": "1628",
+    "imageNum": "67",
+    "en": {
+      "author": "Velasquez",
+      "name": "Bacchus"
+    }
+  },
+  {
+    "author": "Бартоломео Мурильо",
+    "name": "Непорочное зачатие",
+    "year": "1678",
+    "imageNum": "68",
+    "en": {
+      "author": "Bartolomeo Murillo",
+      "name": "Immaculate Conception"
+    }
+  },
+  {
+    "author": "Теодор Жерико",
+    "name": "Плот \"Медузы\"",
+    "year": "1819",
+    "imageNum": "69",
+    "en": {
+      "author": "Theodore Gericault",
+      "name": "Raft"
+    }
+  },
+  {
+    "author": "Иван Шишкин",
+    "name": "Утро в сосновом лесу",
+    "year": "1889",
+    "imageNum": "70",
+    "en": {
+      "author": "Ivan Shishkin",
+      "name": "Morning in a pine forest"
+    }
+  },
+  {
+    "author": "Жан Этьен Лиотар",
+    "name": "Шоколадница",
+    "year": "1745",
+    "imageNum": "71",
+    "en": {
+      "author": "Jean Etienne Lyotard",
+      "name": "Chocolate girl"
+    }
+  },
+  {
+    "author": "Рембрандт",
+    "name": "Автопортрет с Саскией",
+    "year": "1635",
+    "imageNum": "72",
+    "en": {
+      "author": "Rembrandt",
+      "name": "Self-portrait with Saskia"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Крестный ход",
+    "year": "1883",
+    "imageNum": "73",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Religious procession"
+    }
+  },
+  {
+    "author": "Алексей Венециановн",
+    "name": "Спящий пастушок",
+    "year": "1826",
+    "imageNum": "74",
+    "en": {
+      "author": "Alexey Venetsianovn",
+      "name": "Sleeping shepherd boy"
+    }
+  },
+  {
+    "author": "Иван Богданов",
+    "name": "Новичок",
+    "year": "1893",
+    "imageNum": "75",
+    "en": {
+      "author": "Ivan Bogdanov",
+      "name": "Newbie"
+    }
+  },
+  {
+    "author": "Анри де Тулуз-Лотрек",
+    "name": "Угол Мулен де ла Галет",
+    "year": "1892",
+    "imageNum": "76",
+    "en": {
+      "author": "Henri de Toulouse-Lautrec",
+      "name": "Corner of the Moulin de la Galette"
+    }
+  },
+  {
+    "author": "Тициан",
+    "name": "Кающаяся Марина Магдалина",
+    "year": "1565",
+    "imageNum": "77",
+    "en": {
+      "author": "Titian",
+      "name": "Penitent Marina Magdalene"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Инфанта Маргарита",
+    "year": "1654",
+    "imageNum": "78",
+    "en": {
+      "author": "Velasquez",
+      "name": "Infanta Margarita"
+    }
+  },
+  {
+    "author": "Тициан",
+    "name": "Динарий Кесаря",
+    "year": "1516",
+    "imageNum": "79",
+    "en": {
+      "author": "Titian",
+      "name": "Denarius Caesar"
+    }
+  },
+  {
+    "author": "Карл Брюллов",
+    "name": "Всадница",
+    "year": "1832",
+    "imageNum": "80",
+    "en": {
+      "author": "Karl Bryullov",
+      "name": "Horsewoman"
+    }
+  },
+  {
+    "author": "Василий Верещагин",
+    "name": "Апофеоз войны",
+    "year": "1817",
+    "imageNum": "81",
+    "en": {
+      "author": "Vasily Vereshchagin",
+      "name": "Apotheosis of War"
+    }
+  },
+  {
+    "author": "Леонардо да Винчи",
+    "name": "Благовещение",
+    "year": "1475",
+    "imageNum": "82",
+    "en": {
+      "author": "Leonardo da Vinci",
+      "name": "Annunciation"
+    }
+  },
+  {
+    "author": "Алексей Саврасов",
+    "name": "Грачи прилетели",
+    "year": "1871",
+    "imageNum": "83",
+    "en": {
+      "author": "Alexey Savrasov",
+      "name": "The Rooks Have Arrived"
+    }
+  },
+  {
+    "author": "Тициан",
+    "name": "Любовь земная и Любовь небесная",
+    "year": "1516",
+    "imageNum": "84",
+    "en": {
+      "author": "Titian",
+      "name": "Earthly Love and Heavenly Love"
+    }
+  },
+  {
+    "author": "Жан Батист Грёз",
+    "name": "Деревенская помолвка",
+    "year": "1761",
+    "imageNum": "85",
+    "en": {
+      "author": "Jean Baptiste Greuze",
+      "name": "Village Engagement"
+    }
+  },
+  {
+    "author": "Пабло Пикассо",
+    "name": "Авиньонские девицы",
+    "year": "1907",
+    "imageNum": "86",
+    "en": {
+      "author": "Pablo Picasso",
+      "name": "The girls of Avignon"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Бурлаки на Волге",
+    "year": "1873",
+    "imageNum": "87",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Barge Haulers on the Volga"
+    }
+  },
+  {
+    "author": "Михаил Нестеров",
+    "name": "Видение отроку Варфоломею",
+    "year": "1890",
+    "imageNum": "88",
+    "en": {
+      "author": "Mikhail Nesterov",
+      "name": "Vision to the youth Bartholomew"
+    }
+  },
+  {
+    "author": "Рафаэль",
+    "name": "Мадонна Бельведерская",
+    "year": "1506",
+    "imageNum": "89",
+    "en": {
+      "author": "Raphael",
+      "name": "Belvedere Madonna"
+    }
+  },
+  {
+    "author": "Василий тропинин",
+    "name": "Девушка с горшком роз",
+    "year": "1850",
+    "imageNum": "90",
+    "en": {
+      "author": "Vasily tropinin",
+      "name": "Girl with a pot of roses"
+    }
+  },
+  {
+    "author": "Караваджо",
+    "name": "Лютнист",
+    "year": "1596",
+    "imageNum": "91",
+    "en": {
+      "author": "Caravaggio",
+      "name": "Lute player"
+    }
+  },
+  {
+    "author": "Василий Перов",
+    "name": "Охотники на привале",
+    "year": "1871",
+    "imageNum": "92",
+    "en": {
+      "author": "Vasily Perov",
+      "name": "Hunters at rest"
+    }
+  },
+  {
+    "author": "Леонардо да Винчи",
+    "name": "Тайная вечеря",
+    "year": "1498",
+    "imageNum": "93",
+    "en": {
+      "author": "Leonardo da Vinci",
+      "name": "The Last Supper"
+    }
+  },
+  {
+    "author": "Жан Батист Грёз",
+    "name": "Избалованное дитя",
+    "year": "1765",
+    "imageNum": "94",
+    "en": {
+      "author": "Jean Baptiste Greuze",
+      "name": "Spoiled child"
+    }
+
+  },
+  {
+    "author": "Адольф Вильям Бугро",
+    "name": "Волна",
+    "year": "1896",
+    "imageNum": "95",
+    "en": {
+      "author": "Adolphe William Bouguereau",
+      "name": "Wave"
+    }
+  },
+  {
+    "author": "Кузьма Петров-Водкин",
+    "name": "Купание красного коня",
+    "year": "1912",
+    "imageNum": "96",
+    "en": {
+      "author": "Kuzma Petrov-Vodkin",
+      "name": "Bathing the red horse"
+    }
+  },
+  {
+    "author": "Густав Климт",
+    "name": "Поцелуй",
+    "year": "1908",
+    "imageNum": "97",
+    "en": {
+      "author": "Gustav Klimt",
+      "name": "Kiss"
+    }
+  },
+  {
+    "author": "Иван Шишкин",
+    "name": "Рожь",
+    "year": "1878",
+    "imageNum": "98",
+    "en": {
+      "author": "Ivan Shishkin",
+      "name": "Rye"
+    }
+  },
+  {
+    "author": "Жан-Леон Жером",
+    "name": "Бой гладиаторов",
+    "year": "1872",
+    "imageNum": "99",
+    "en": {
+      "author": "Jean-Leon Gerome",
+      "name": "Gladiator Fight"
+    }
+  },
+  {
+    "author": "Василий Суриков",
+    "name": "Боярыня Морозова",
+    "year": "1887",
+    "imageNum": "100",
+    "en": {
+      "author": "Vasily Surikov",
+      "name": "Boyarynya Morozova"
+    }
+  },
+  {
+    "author": "Исаак Левитан",
+    "name": "Над вечным покоем",
+    "year": "1894",
+    "imageNum": "101",
+    "en": {
+      "author": "Isaac Levitan",
+      "name": "Over eternal rest"
+    }
+  },
+  {
+    "author": "Гейнсборо",
+    "name": "Дама в голубом",
+    "year": "1780",
+    "imageNum": "102",
+    "en": {
+      "author": "Gainsborough",
+      "name": "Lady in blue"
+    }
+  },
+  {
+    "author": "Алексей Венецианов",
+    "name": "На пашне. Весна",
+    "year": "1820",
+    "imageNum": "103",
+    "en": {
+      "author": "Alexey Venetsianov",
+      "name": "On arable land. Spring"
+    }
+  },
+  {
+    "author": "Тициан",
+    "name": "Саломея",
+    "year": "1515",
+    "imageNum": "104",
+    "en": {
+      "author": "Titian",
+      "name": "Salome"
+    }
+  },
+  {
+    "author": "Василий Кандинский",
+    "name": "Композиция VIII",
+    "year": "1923",
+    "imageNum": "105",
+    "en": {
+      "author": "Wassily Kandinsky",
+      "name": "Song VIII"
+    }
+  },
+  {
+    "author": "Василий Поленов",
+    "name": "В парке",
+    "year": "1874",
+    "imageNum": "106",
+    "en": {
+      "author": "Vasily Polenov",
+      "name": "In the park"
+    }
+  },
+  {
+    "author": "Луи Лагрене",
+    "name": "Марс и Венера",
+    "year": "1770",
+    "imageNum": "107",
+    "en": {
+      "author": "Louis Lagrenet",
+      "name": "Mars and Venus"
+    }
+  },
+  {
+    "author": "Сальвадор Дали",
+    "name": "Сон, вызванный полётом пчелы вокруг граната, за секунду до пробуждения",
+    "year": "1944",
+    "imageNum": "108",
+    "en": {
+      "author": "Salvador Dali",
+      "name": "A dream caused by the flight of a bee around a pomegranate, one second before awakening"
+    }
+  },
+  {
+    "author": "Ян Вермеер",
+    "name": "Девушка с жемчужной серёжкой",
+    "year": "1665",
+    "imageNum": "109",
+    "en": {
+      "author": "Jan Vermeer",
+      "name": "Girl with a pearl earring"
+    }
+  },
+  {
+    "author": "Анри Руссо",
+    "name": "Спящая цыганка",
+    "year": "1897",
+    "imageNum": "110",
+    "en": {
+      "author": "Henri Rousseau",
+      "name": "Sleeping gypsy"
+    }
+  },
+  {
+    "author": "Василий Поленов",
+    "name": "Переправа через реку",
+    "year": "1872",
+    "imageNum": "111",
+    "en": {
+      "author": "Vasily Polenov",
+      "name": "Crossing the river"
+    }
+  },
+  {
+    "author": "Эдвард Мунк",
+    "name": "Крик",
+    "year": "1893",
+    "imageNum": "112",
+    "en": {
+      "author": "Edvard Munch",
+      "name": "Shout"
+    }
+  },
+  {
+    "author": "Карл Брюллов",
+    "name": "Последний день Помпеи",
+    "year": "1833",
+    "imageNum": "113",
+    "en": {
+      "author": "Karl Bryullov",
+      "name": "The last day of Pompeii"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Летний пейзаж",
+    "year": "1879",
+    "imageNum": "114",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Summer landscape"
+    }
+  },
+  {
+    "author": "Ян Вермеер",
+    "name": "Молочница",
+    "year": "1660",
+    "imageNum": "115",
+    "en": {
+      "author": "Jan Vermeer",
+      "name": "Thrush"
+    }
+  },
+  {
+    "author": "Иван Айвазовский",
+    "name": "Девятый вал",
+    "year": "1850",
+    "imageNum": "116",
+    "en": {
+      "author": "Ivan Aivazovsky",
+      "name": "Ninth wave"
+    }
+  },
+  {
+    "author": "Винсент ван Гог",
+    "name": "Подсолнухи",
+    "year": "1888",
+    "imageNum": "117",
+    "en": {
+      "author": "Vincent van Gogh",
+      "name": "Sunflowers"
+    }
+  },
+  {
+    "author": "Валентин Серов",
+    "name": "Девочка с персиками",
+    "year": "1887",
+    "imageNum": "118",
+    "en": {
+      "author": "Valentin Serov",
+      "name": "Girl with peaches"
+    }
+  },
+  {
+    "author": "Караваджо",
+    "name": "Обращение Савла",
+    "year": "1601",
+    "imageNum": "119",
+    "en": {
+      "author": "Caravaggio",
+      "name": "Saul's conversion"
+    }
+  },
+  {
+    "author": "Альбрехт Дюрер",
+    "name": "Праздник венков из роз",
+    "year": "1506",
+    "imageNum": "120",
+    "en": {
+      "author": "Albrecht Durer",
+      "name": "Rose Wreath Festival"
+    }
+  },
+  {
+    "author": "Эль Греко",
+    "name": "Изгнание торгующих из храма",
+    "year": "1600",
+    "imageNum": "121",
+    "en": {
+      "author": "El Greco",
+      "name": "Expulsion of the merchants from the temple"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Приготовление к экзамену",
+    "year": "1864",
+    "imageNum": "122",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Exam Preparation"
+    }
+  },
+  {
+    "author": "Исаак Левитан",
+    "name": "Март",
+    "year": "1895",
+    "imageNum": "123",
+    "en": {
+      "author": "Isaac Levitan",
+      "name": "March"
+    }
+  },
+  {
+    "author": "Адольф Вильям Бугро",
+    "name": "Девушка и Амур",
+    "year": "1880",
+    "imageNum": "124",
+    "en": {
+      "author": "Adolphe William Bouguereau",
+      "name": "Girl and Cupid"
+    }
+  },
+  {
+    "author": "Леонардо да Винчи",
+    "name": "Мадонна Литта",
+    "year": "1491",
+    "imageNum": "125",
+    "en": {
+      "author": "Leonardo da Vinci",
+      "name": "Madonna Litta"
+    }
+  },
+  {
+    "author": "Казимир Малевич",
+    "name": "Черный квадрат",
+    "year": "1915",
+    "imageNum": "126",
+    "en": {
+      "author": "Kazimir Malevich",
+      "name": "Black square"
+    }
+  },
+  {
+    "author": "Эль Греко",
+    "name": "Апостолы Петр и Павел",
+    "year": "1592",
+    "imageNum": "127",
+    "en": {
+      "author": "El Greco",
+      "name": "Apostles Peter and Paul"
+    }
+  },
+  {
+    "author": "Виктор Васнецов",
+    "name": "Витязь на распутье",
+    "year": "1878",
+    "imageNum": "128",
+    "en": {
+      "author": "Viktor Vasnetsov",
+      "name": "Knight at the Crossroads"
+    }
+  },
+  {
+    "author": "Константин Маковский",
+    "name": "Боярский свадебный пир",
+    "year": "1883",
+    "imageNum": "129",
+    "en": {
+      "author": "Konstantin Makovsky",
+      "name": "Boyar wedding feast"
+    }
+  },
+  {
+    "author": "Эжен Делакруа",
+    "name": "Свобода, ведущая народ",
+    "year": "1830",
+    "imageNum": "130",
+    "en": {
+      "author": "Eugene Delacroix",
+      "name": "Freedom leading the people"
+    }
+  },
+  {
+    "author": "Василий Поленов",
+    "name": "Бабушкин сад",
+    "year": "1878",
+    "imageNum": "131",
+    "en": {
+      "author": "Vasily Polenov",
+      "name": "Grandma's Garden"
+    }
+  },
+  {
+    "author": "Анри Матисс",
+    "name": "Семейный портрет",
+    "year": "1911",
+    "imageNum": "132",
+    "en": {
+      "author": "Henri Matisse",
+      "name": "Family portrait"
+    }
+  },
+  {
+    "author": "Константин Маковский",
+    "name": "Гадание",
+    "year": "1890",
+    "imageNum": "133",
+    "en": {
+      "author": "Konstantin Makovsky",
+      "name": "Divination"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Мост в Шату",
+    "year": "1875",
+    "imageNum": "134",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Bridge to Shatu"
+    }
+  },
+  {
+    "author": "Сандро Боттичелли",
+    "name": "Весна",
+    "year": "1482",
+    "imageNum": "135",
+    "en": {
+      "author": "Sandro Botticelli",
+      "name": "Spring"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Зонтики",
+    "year": "1886",
+    "imageNum": "136",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Umbrellas"
+    }
+  },
+  {
+    "author": "Гюстав Курбе",
+    "name": "Мастерская художника",
+    "year": "1855",
+    "imageNum": "137",
+    "en": {
+      "author": "Gustave Courbet",
+      "name": "Artist's Workshop"
+    }
+  },
+  {
+    "author": "Василий Поленов",
+    "name": "Деревня Окулова гора",
+    "year": "1860",
+    "imageNum": "138",
+    "en": {
+      "author": "Vasily Polenov",
+      "name": "Okulova Gora village"
+    }
+  },
+  {
+    "author": "Константин Маковский",
+    "name": "Перемещение ковра Мухаммеда из Мекки в Каир",
+    "year": "1875",
+    "imageNum": "139",
+    "en": {
+      "author": "Konstantin Makovsky",
+      "name": "Moving the carpet of Muhammad from Mecca to Cairo"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Бал в Мулен де ла Галетт",
+    "year": "1876",
+    "imageNum": "140",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Ball at the Moulin de la Galette"
+    }
+  },
+  {
+    "author": "Иван Крамской",
+    "name": "Неизвестная",
+    "year": "1883",
+    "imageNum": "141",
+    "en": {
+      "author": "Ivan Kramskoy",
+      "name": "Unknown"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Кузница вулкана",
+    "year": "1630",
+    "imageNum": "142",
+    "en": {
+      "author": "Velasquez",
+      "name": "Forge of the volcano"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Запорожцы",
+    "year": "1891",
+    "imageNum": "143",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Cossacks"
+    }
+  },
+  {
+    "author": "Рафаэль",
+    "name": "Дама с единорогом",
+    "year": "1506",
+    "imageNum": "144",
+    "en": {
+      "author": "Raphael",
+      "name": "Lady with a unicorn"
+    }
+  },
+  {
+    "author": "Александр Иванов",
+    "name": "Явление Христа народу",
+    "year": "1857",
+    "imageNum": "145",
+    "en": {
+      "author": "Alexander Ivanov",
+      "name": "Appearance of Christ to the people"
+    }
+  },
+  {
+    "author": "Эдуард Мане",
+    "name": "Женщина с кувшином",
+    "year": "1858",
+    "imageNum": "146",
+    "en": {
+      "author": "Edouard Manet",
+      "name": "Woman with a jug"
+    }
+  },
+  {
+    "author": "Тициан",
+    "name": "Конный портрет Карла V",
+    "year": "1548",
+    "imageNum": "147",
+    "en": {
+      "author": "Titian",
+      "name": "Equestrian portrait of Charles V"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Завтрак гребцов",
+    "year": "1881",
+    "imageNum": "148",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Rowers' Breakfast"
+    }
+  },
+  {
+    "author": "Карл Брюллов",
+    "name": "Итальянский полдень",
+    "year": "1827",
+    "imageNum": "149",
+    "en": {
+      "author": "Karl Bryullov",
+      "name": "Italian noon"
+    }
+  },
+  {
+    "author": "Виктор Васнецов",
+    "name": "Царь Иван Васильевич Грозный",
+    "year": "1896",
+    "imageNum": "150",
+    "en": {
+      "author": "Viktor Vasnetsov",
+      "name": "Tsar Ivan Vasilyevich the Terrible"
+    }
+  },
+  {
+    "author": "Питер Брейгель",
+    "name": "Охотники на снегу",
+    "year": "1565",
+    "imageNum": "151",
+    "en": {
+      "author": "Pieter Bruegel",
+      "name": "Hunters in the Snow"
+    }
+  },
+  {
+    "author": "Виктор Васнецов",
+    "name": "Ковер-самолёт",
+    "year": "1880",
+    "imageNum": "152",
+    "en": {
+      "author": "Viktor Vasnetsov",
+      "name": "Flying carpet"
+    }
+  },
+  {
+    "author": "Марк Шагал",
+    "name": "Я и деревня",
+    "year": "1911",
+    "imageNum": "153",
+    "en": {
+      "author": "Marc Chagall",
+      "name": "Me and the village"
+    }
+  },
+  {
+    "author": "Леонардо да Винчи",
+    "name": "Мона Лиза",
+    "year": "1505",
+    "imageNum": "154",
+    "en": {
+      "author": "Leonardo da Vinci",
+      "name": "Mona Lisa"
+    }
+  },
+  {
+    "author": "Франческо Баккьякка",
+    "name": "Мадонна с младенцем",
+    "year": "1520",
+    "imageNum": "155",
+    "en": {
+      "author": "Francesco Bacchiacca",
+      "name": "Madonna and Child"
+    }
+  },
+  {
+    "author": "Жак-Луи Давид",
+    "name": "Клятва Горациев",
+    "year": "1784",
+    "imageNum": "156",
+    "en": {
+      "author": "Jacques-Louis David",
+      "name": "Oath of the Horace"
+    }
+  },
+  {
+    "author": "Альбрехт Дюрер",
+    "name": "Адам и Ева",
+    "year": "1507",
+    "imageNum": "157",
+    "en": {
+      "author": "Albrecht Durer",
+      "name": "Adam and Eve"
+    }
+  },
+  {
+    "author": "Бартоломео Мурильо",
+    "name": "Явление и дар Богородицы",
+    "year": "1655",
+    "imageNum": "158",
+    "en": {
+      "author": "Bartolomeo Murillo",
+      "name": "Appearance and gift of the Mother of God"
+    }
+  },
+  {
+    "author": "Василий Перов",
+    "name": "Птицелов",
+    "year": "1870",
+    "imageNum": "159",
+    "en": {
+      "author": "Vasily Perov",
+      "name": "Birdman"
+    }
+  },
+  {
+    "author": "Караваджо",
+    "name": "Отдых на пути в Египет",
+    "year": "1596",
+    "imageNum": "160",
+    "en": {
+      "author": "Caravaggio",
+      "name": "Rest on the Flight to Egypt"
+    }
+  },
+  {
+    "author": "Франциско Гоя",
+    "name": "Расстрел повстанцев",
+    "year": "1808",
+    "imageNum": "161",
+    "en": {
+      "author": "Francisco Goya",
+      "name": "Shooting of the rebels"
+    }
+  },
+  {
+    "author": "Рафаэль",
+    "name": "Триумф Галатеи",
+    "year": "1512",
+    "imageNum": "162",
+    "en": {
+      "author": "Raphael",
+      "name": "Triumph of Galatea"
+    }
+  },
+  {
+    "author": "Михаил Врубель",
+    "name": "Демон сидящий",
+    "year": "1890",
+    "imageNum": "163",
+    "en": {
+      "author": "Mikhail Vrubel",
+      "name": "Sitting demon"
+    }
+  },
+  {
+    "author": "Винсент ван Гог",
+    "name": "Ирисы",
+    "year": "1889",
+    "imageNum": "164",
+    "en": {
+      "author": "Vincent van Gogh",
+      "name": "Irises"
+    }
+  },
+  {
+    "author": "Поль Деларош",
+    "name": "Казнь Джейн Грей",
+    "year": "1833",
+    "imageNum": "165",
+    "en": {
+      "author": "Paul Delaroche",
+      "name": "Execution of Jane Gray"
+    }
+  },
+  {
+    "author": "Джон Констебл",
+    "name": "Вид на собор в Солсбери из епископского сада",
+    "year": "1823",
+    "imageNum": "166",
+    "en": {
+      "author": "John Constable",
+      "name": "View of Salisbury Cathedral from the Bishop's Garden"
+    }
+  },
+  {
+    "author": "Винсент ван Гог",
+    "name": "Звёздная ночь",
+    "year": "1889",
+    "imageNum": "167",
+    "en": {
+      "author": "Vincent van Gogh",
+      "name": "Starry Night"
+    }
+  },
+  {
+    "author": "Франсуа Буше",
+    "name": "Четыре сезона - Весна",
+    "year": "1755",
+    "imageNum": "168",
+    "en": {
+      "author": "Francois Boucher",
+      "name": "Four seasons - Spring"
+    }
+  },
+  {
+    "author": "Рафаэль",
+    "name": "Мадонна с розой",
+    "year": "1518",
+    "imageNum": "169",
+    "en": {
+      "author": "Raphael",
+      "name": "Madonna of the Rose"
+    }
+  },
+  {
+    "author": "Василий Тропинин",
+    "name": "Кружевница",
+    "year": "1823",
+    "imageNum": "170",
+    "en": {
+      "author": "Vasily Tropinin",
+      "name": "Lacemaker"
+    }
+  },
+  {
+    "author": "Рембрандт",
+    "name": "Пир Вальтасара",
+    "year": "1635",
+    "imageNum": "171",
+    "en": {
+      "author": "Rembrandt",
+      "name": "Valthasar's Feast"
+    }
+  },
+  {
+    "author": "Василий Суриков",
+    "name": "Переход Суворова через Альпы",
+    "year": "1899",
+    "imageNum": "172",
+    "en": {
+      "author": "Vasily Surikov",
+      "name": "Suvorov's crossing over the Alps"
+    }
+  },
+  {
+    "author": "Исаак Левитан",
+    "name": "Золотая осень",
+    "year": "1895",
+    "imageNum": "173",
+    "en": {
+      "author": "Isaac Levitan",
+      "name": "Golden Autumn"
+    }
+  },
+  {
+    "author": "Архип Куинджи",
+    "name": "На острове Валааме",
+    "year": "1873",
+    "imageNum": "174",
+    "en": {
+      "author": "Arkhip Kuindzhi",
+      "name": "On the island of Valaam"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Сдача Бреды",
+    "year": "1635",
+    "imageNum": "175",
+    "en": {
+      "author": "Velasquez",
+      "name": "Delivering Delirium"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Не ждали",
+    "year": "1888",
+    "imageNum": "176",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Didn't expect"
+    }
+  },
+  {
+    "author": "Франсуа Буше",
+    "name": "Купание Дианы",
+    "year": "1742",
+    "imageNum": "177",
+    "en": {
+      "author": "Francois Boucher",
+      "name": "Bathing Diana"
+    }
+  },
+  {
+    "author": "Альбрехт Дюрер",
+    "name": "Праздник четок",
+    "year": "1506",
+    "imageNum": "178",
+    "en": {
+      "author": "Albrecht Durer",
+      "name": "Rosary Festival"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Портрет Жанны Самари",
+    "year": "1877",
+    "imageNum": "179",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Portrait of Jeanne Samary"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Садко",
+    "year": "1876",
+    "imageNum": "180",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Sadko"
+    }
+  },
+  {
+    "author": "Архип Куинджи",
+    "name": "Лунная ночь на Днепре",
+    "year": "1880",
+    "imageNum": "181",
+    "en": {
+      "author": "Arkhip Kuindzhi",
+      "name": "Moonlit night on the Dnieper"
+    }
+  },
+  {
+    "author": "Веласкес",
+    "name": "Поклонение волхвов",
+    "year": "1619",
+    "imageNum": "182",
+    "en": {
+      "author": "Velasquez",
+      "name": "Adoration of the Magi"
+    }
+  },
+  {
+    "author": "Николай Богданов-Бельский",
+    "name": "У дверей школы",
+    "year": "1897",
+    "imageNum": "183",
+    "en": {
+      "author": "Nikolay Bogdanov-Belsky",
+      "name": "At the school door"
+    }
+  },
+  {
+    "author": "Иероним Босх",
+    "name": "Сад земных наслаждений",
+    "year": "1510",
+    "imageNum": "184",
+    "en": {
+      "author": "Hieronymus Bosch",
+      "name": "Garden of earthly delights"
+    }
+  },
+  {
+    "author": "Корреджо",
+    "name": "Даная",
+    "year": "1530",
+    "imageNum": "185",
+    "en": {
+      "author": "Correggio",
+      "name": "Danae"
+    }
+  },
+  {
+    "author": "Питер Пауль Рубенс",
+    "name": "Похищение дочерей Левкиппа",
+    "year": "1618",
+    "imageNum": "186",
+    "en": {
+      "author": "Peter Paul Rubens",
+      "name": "Abduction of the daughters of Leucippus"
+    }
+  },
+  {
+    "author": "Жан Энгр",
+    "name": "Большая одалиска",
+    "year": "1814",
+    "imageNum": "187",
+    "en": {
+      "author": "Jean Ingres",
+      "name": "Big odalisque"
+    }
+  },
+  {
+    "author": "Рафаэль",
+    "name": "Сикстинская Мадонна",
+    "year": "1520",
+    "imageNum": "188",
+    "en": {
+      "author": "Raphael",
+      "name": "Sistine Madonna"
+    }
+  },
+  {
+    "author": "Рембрандт",
+    "name": "Похищение Европы",
+    "year": "1632",
+    "imageNum": "189",
+    "en": {
+      "author": "Rembrandt",
+      "name": "Abduction of Europa"
+    }
+  },
+  {
+    "author": "Питер Пауль Рубенс",
+    "name": "Похищение Орфии Бореем",
+    "year": "1615",
+    "imageNum": "190",
+    "en": {
+      "author": "Peter Paul Rubens",
+      "name": "Abduction of Orphia by Boreas"
+    }
+  },
+  {
+    "author": "Архип Куинджи",
+    "name": "Украинская ночь",
+    "year": "1876",
+    "imageNum": "191",
+    "en": {
+      "author": "Arkhip Kuindzhi",
+      "name": "Ukrainian night"
+    }
+  },
+  {
+    "author": "Эдгар Дега",
+    "name": "Танцовщицы у станка",
+    "year": "1877",
+    "imageNum": "192",
+    "en": {
+      "author": "Edgar Degas",
+      "name": "Dancers at the barre"
+    }
+  },
+  {
+    "author": "Алексей Венецианов",
+    "name": "На жатве. Лето",
+    "year": "1827",
+    "imageNum": "193",
+    "en": {
+      "author": "Alexey Venetsianov",
+      "name": "At harvest. Summer"
+    }
+  },
+  {
+    "author": "Пьер Огюст Ренуар",
+    "name": "Две сестры",
+    "year": "1881",
+    "imageNum": "194",
+    "en": {
+      "author": "Pierre Auguste Renoir",
+      "name": "Two sisters"
+    }
+  },
+  {
+    "author": "Рембрандт",
+    "name": "Ночной дозор",
+    "year": "1642",
+    "imageNum": "195",
+    "en": {
+      "author": "Rembrandt",
+      "name": "Night Watch"
+    }
+  },
+  {
+    "author": "Эдуар Мане",
+    "name": "Бар в «Фоли-Бержер»",
+    "year": "1882",
+    "imageNum": "196",
+    "en": {
+      "author": "Edouard Manet",
+      "name": "Bar at the Folies Bergère"
+    }
+  },
+  {
+    "author": "Никола Пуссен",
+    "name": "Пейзаж с Полифемом",
+    "year": "1649",
+    "imageNum": "197",
+    "en": {
+      "author": "Nicolas Poussin",
+      "name": "Landscape with Polyphemus"
+    }
+  },
+  {
+    "author": "Питер Брейгель",
+    "name": "Притча о слепых",
+    "year": "1568",
+    "imageNum": "198",
+    "en": {
+      "author": "Pieter Bruegel",
+      "name": "The parable of the blind"
+    }
+  },
+  {
+    "author": "Виктор Васнецов",
+    "name": "Иван-царевич на Сером Волке",
+    "year": "1888",
+    "imageNum": "199",
+    "en": {
+      "author": "Viktor Vasnetsov",
+      "name": "Ivan Tsarevich on the Gray Wolf"
+    }
+  },
+  {
+    "author": "Сандро Боттичелли",
+    "name": "Рождение Венеры",
+    "year": "1486",
+    "imageNum": "200",
+    "en": {
+      "author": "Sandro Botticelli",
+      "name": "The Birth of Venus"
+    }
+  },
+  {
+    "author": "Леонардо да Винчи",
+    "name": "Мадонна в скалах",
+    "year": "1486",
+    "imageNum": "201",
+    "en": {
+      "author": "Leonardo da Vinci",
+      "name": "Madonna of the Rocks"
+    }
+  },
+  {
+    "author": "Аксели Галлен-Каллела",
+    "name": "Любовники",
+    "year": "1916",
+    "imageNum": "202",
+    "en": {
+      "author": "Axeli Gallen-Kallela",
+      "name": "Lovers"
+    }
+  },
+  {
+    "author": "Винсент Ван Гог",
+    "name": "Автопортрет с перевязанным ухом",
+    "year": "1889",
+    "imageNum": "203",
+    "en": {
+      "author": "Vincent Van Gogh",
+      "name": "Self-portrait with bandaged ear"
+    }
+  },
+  {
+    "author": "Клод Моне",
+    "name": "Впечатление. Восходящее солнце",
+    "year": "1882",
+    "imageNum": "204",
+    "en": {
+      "author": "Claude Monet",
+      "name": "Impression. Rising sun"
+    }
+  },
+  {
+    "author": "Рембрандт",
+    "name": "Возвращение блудного сына",
+    "year": "1662",
+    "imageNum": "205",
+    "en": {
+      "author": "Rembrandt",
+      "name": "Return of the prodigal son"
+    }
+  },
+  {
+    "author": "Караваджо",
+    "name": "Больной вакх",
+    "year": "1593",
+    "imageNum": "206",
+    "en": {
+      "author": "Caravaggio",
+      "name": "Sick Bacchus"
+    }
+  },
+  {
+    "author": "Иван Айвазовский",
+    "name": "Лунная дорожка",
+    "year": "1886",
+    "imageNum": "207",
+    "en": {
+      "author": "Ivan Aivazovsky",
+      "name": "Moon path"
+    }
+  },
+  {
+    "author": "Винсент Ван Гог",
+    "name": "Пшеничное поле с кипарисами",
+    "year": "1889",
+    "imageNum": "208",
+    "en": {
+      "author": "Vincent Van Gogh",
+      "name": "Wheat field with cypresses"
+    }
+  },
+  {
+    "author": "Аксели Галлен-Каллела",
+    "name": "Мальчик и ворона",
+    "year": "1884",
+    "imageNum": "209",
+    "en": {
+      "author": "Axeli Gallen-Kallela",
+      "name": "Boy and Crow"
+    }
+  },
+  {
+    "author": "Ян Вермеер",
+    "name": "Астроном",
+    "year": "1668",
+    "imageNum": "210",
+    "en": {
+      "author": "Jan Vermeer",
+      "name": "Astronomer"
+    }
+  },
+  {
+    "author": "Питер Пауль Рубенс",
+    "name": "Союз Земли и Воды",
+    "year": "1618",
+    "imageNum": "211",
+    "en": {
+      "author": "Peter Paul Rubens",
+      "name": "Union of Earth and Water"
+    }
+  },
+  {
+    "author": "Клод Моне",
+    "name": "Стог сена в Живерни",
+    "year": "1886",
+    "imageNum": "212",
+    "en": {
+      "author": "Claude Monet",
+      "name": "Haystack at Giverny"
+    }
+  },
+  {
+    "author": "Жан Фрагонар",
+    "name": "Задвижка",
+    "year": "1777",
+    "imageNum": "213",
+    "en": {
+      "author": "Jean Fragonard",
+      "name": "Gate"
+    }
+  },
+  {
+    "author": "Эдуард Мане",
+    "name": "Бар в Фоли-Бержер",
+    "year": "1882",
+    "imageNum": "214",
+    "en": {
+      "author": "Edouard Manet",
+      "name": "Bar at the Folies Bergères"
+    }
+  },
+  {
+    "author": "Винсент Ван Гог",
+    "name": "Ночное кафе в Арле",
+    "year": "1888",
+    "imageNum": "215",
+    "en": {
+      "author": "Vincent Van Gogh",
+      "name": "Night Cafe in Arles"
+    }
+  },
+  {
+    "author": "Клод Моне",
+    "name": "Пруд с кувшинками",
+    "year": "1899",
+    "imageNum": "216",
+    "en": {
+      "author": "Claude Monet",
+      "name": "Water lily pond"
+    }
+  },
+  {
+    "author": "Иван Айвазовский",
+    "name": "Буря",
+    "year": "1868",
+    "imageNum": "217",
+    "en": {
+      "author": "Ivan Aivazovsky",
+      "name": "Storm"
+    }
+  },
+  {
+    "author": "Ян Вермеер",
+    "name": "Кружевница",
+    "year": "1671",
+    "imageNum": "218",
+    "en": {
+      "author": "Jan Vermeer",
+      "name": "Lacemaker"
+    }
+  },
+  {
+    "author": "Карл Брюллов",
+    "name": "Автопортрет",
+    "year": "1848",
+    "imageNum": "219",
+    "en": {
+      "author": "Karl Bryullov",
+      "name": "Self-portrait"
+    }
+  },
+  {
+    "author": "Питер Брейгель",
+    "name": "Вавилонская башня",
+    "year": "1563",
+    "imageNum": "220",
+    "en": {
+      "author": "Pieter Bruegel",
+      "name": "Tower of Babel"
+    }
+  },
+  {
+    "author": "Поль Гоген",
+    "name": "Кафе в Арле",
+    "year": "1888",
+    "imageNum": "221",
+    "en": {
+      "author": "Paul Gauguin",
+      "name": "Cafe in Arles"
+    }
+  },
+  {
+    "author": "Иван Шишкин",
+    "name": "Сосновый бор",
+    "year": "1895",
+    "imageNum": "222",
+    "en": {
+      "author": "Ivan Shishkin",
+      "name": "Pine Forest"
+    }
+  },
+  {
+    "author": "Клод Моне",
+    "name": "Завтрак на траве",
+    "year": "1865",
+    "imageNum": "223",
+    "en": {
+      "author": "Claude Monet",
+      "name": "Breakfast on the grass"
+    }
+  },
+  {
+    "author": "Рафаэль",
+    "name": "Святой Георгий и дракон",
+    "year": "1506",
+    "imageNum": "224",
+    "en": {
+      "author": "Raphael",
+      "name": "Saint George and the Dragon"
+    }
+  },
+  {
+    "author": "Пабло Пикассо",
+    "name": "Любительница абсента",
+    "year": "1901",
+    "imageNum": "225",
+    "en": {
+      "author": "Pablo Picasso",
+      "name": "Absinthe Drinker"
+    }
+  },
+  {
+    "author": "Эдгар Дега",
+    "name": "Перед репетицией",
+    "year": "1880",
+    "imageNum": "226",
+    "en": {
+      "author": "Edgar Degas",
+      "name": "Before rehearsal"
+    }
+  },
+  {
+    "author": "Николай Рерих",
+    "name": "Помни!",
+    "year": "1924",
+    "imageNum": "227",
+    "en": {
+      "author": "Nicholas Roerich",
+      "name": "Remember!"
+    }
+  },
+  {
+    "author": "Илья Репин",
+    "name": "Стрекоза",
+    "year": "1884",
+    "imageNum": "228",
+    "en": {
+      "author": "Ilya Repin",
+      "name": "Dragonfly"
+    }
+  },
+  {
+    "author": "Клод Моне",
+    "name": "Мост Ватерлоо, туман",
+    "year": "1903",
+    "imageNum": "229",
+    "en": {
+      "author": "Claude Monet",
+      "name": "Waterloo Bridge, fog"
+    }
+  },
+  {
+    "author": "Исаак Левитан",
+    "name": "Весна – большая вода",
+    "year": "1897",
+    "imageNum": "230",
+    "en": {
+      "author": "Isaac Levitan",
+      "name": "Spring is big water"
+    }
+  },
+  {
+    "author": "Аксели Галлен-Каллела",
+    "name": "Первый урок",
+    "year": "1889",
+    "imageNum": "231",
+    "en": {
+      "author": "Axeli Gallen-Kallela",
+      "name": "First lesson"
+    }
+  },
+  {
+    "author": "Иван Айвазовский",
+    "name": "Буря на море",
+    "year": "1873",
+    "imageNum": "232",
+    "en": {
+      "author": "Ivan Aivazovsky",
+      "name": "Storm at sea"
+    }
+  },
+  {
+    "author": "Эдгар Дега",
+    "name": "Балетный класс",
+    "year": "1874",
+    "imageNum": "233",
+    "en": {
+      "author": "Edgar Degas",
+      "name": "Ballet class"
+    }
+  },
+  {
+    "author": "Николай Рерих",
+    "name": "Горная обитель",
+    "year": "1933",
+    "imageNum": "234",
+    "en": {
+      "author": "Nicholas Roerich",
+      "name": "Mountain abode"
+    }
+  },
+  {
+    "author": "Леонардо да Винчи",
+    "name": "Святая Анна с Мадонной",
+    "year": "1510",
+    "imageNum": "235",
+    "en": {
+      "author": "Leonardo da Vinci",
+      "name": "Saint Anne with Madonna"
+    }
+  },
+  {
+    "author": "Эль Греко",
+    "name": "Мальчик, зажигающий свечу",
+    "year": "1572",
+    "imageNum": "236",
+    "en": {
+      "author": "El Greco",
+      "name": "Boy lighting a candle"
+    }
+  },
+  {
+    "author": "Пабло Пикассо",
+    "name": "Дружба",
+    "year": "1908",
+    "imageNum": "237",
+    "en": {
+      "author": "Pablo Picasso",
+      "name": "Friendship"
+    }
+  },
+  {
+    "author": "Аксели Галлен-Каллела",
+    "name": "Девушка на ветру",
+    "year": "1893",
+    "imageNum": "238",
+    "en": {
+      "author": "Axeli Gallen-Kallela",
+      "name": "Girl in the Wind"
+    }
+  },
+  {
+    "author": "Иван Айвазовский",
+    "name": "Волна",
+    "year": "1889",
+    "imageNum": "239",
+    "en": {
+      "author": "Ivan Aivazovsky",
+      "name": "Wave"
+    }
+  }
+]
+}
