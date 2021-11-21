@@ -1,7 +1,7 @@
 import {loadJson} from "./artist";
 import {divideIntoParts} from "./artist_quiz";
 import {makeVisible} from "./main";
-import {stopTimer} from "./settings";
+import {body, stopTimer} from "./settings";
 
 loadJson('./assets/json.json').catch(alert).then(data => {
     const infoArr = data.items;
@@ -31,7 +31,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                     createResultCards(index, i)
                 })
 
-                const z = localStorage.getItem(`artist results ${index}`).split(',')
+                const arrResultCards = localStorage.getItem(`artist results ${index}`).split(',')
                 const cards = document.querySelectorAll('.result-card')
 
                 const resultModal = document.querySelector('.artist-result__modal')
@@ -54,7 +54,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                         overlay.style.display = 'none';
                     })
 
-                z.forEach((item, index) => {
+                arrResultCards.forEach((item, index) => {
                     if (item === 'true') {
                         cards[index].classList.remove('wrong-answer')
                     }
@@ -69,8 +69,6 @@ loadJson('./assets/json.json').catch(alert).then(data => {
         resultCard.style.backgroundImage = `url("./assets/images/img/${arrayParts[arrPartsInd][objInd].imageNum}.jpg")`
         artistsResults.append(resultCard)
     }
-
-
 });
 
 export function clearHTML(container) {
@@ -78,7 +76,13 @@ export function clearHTML(container) {
 }
 
 export function showInfo(arrayParts, arrPartsInd, objInd, authorName, year, name) {
-    authorName.innerHTML = `${arrayParts[arrPartsInd][objInd].author}`
-    year.innerHTML = `${arrayParts[arrPartsInd][objInd].year}`
-    name.innerHTML = `${arrayParts[arrPartsInd][objInd].name}`
+    if (body.classList.contains('english')) {
+        authorName.innerHTML = `${arrayParts[arrPartsInd][objInd].en.author}`
+        year.innerHTML = `${arrayParts[arrPartsInd][objInd].year}`
+        name.innerHTML = `${arrayParts[arrPartsInd][objInd].en.name}`
+    } else {
+        authorName.innerHTML = `${arrayParts[arrPartsInd][objInd].author}`
+        year.innerHTML = `${arrayParts[arrPartsInd][objInd].year}`
+        name.innerHTML = `${arrayParts[arrPartsInd][objInd].name}`
+    }
 }

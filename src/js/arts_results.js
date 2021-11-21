@@ -32,7 +32,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                 arrayParts[index].forEach((card, i) => {
                     createResultCards(index, i)
                 })
-                const z = localStorage.getItem(`arts results ${index}`).split(',')
+                const arrResultCards = localStorage.getItem(`arts results ${index}`).split(',')
                 const cards = document.querySelectorAll('.result-card')
 
                 const resultModal = document.querySelector('.arts-result__modal')
@@ -54,7 +54,7 @@ loadJson('./assets/json.json').catch(alert).then(data => {
                     overlay.style.display = 'none';
                 })
 
-                z.forEach((item, index) => {
+                arrResultCards.forEach((item, index) => {
                     if (item === 'true') {
                         cards[index].classList.remove('wrong-answer')
                     }

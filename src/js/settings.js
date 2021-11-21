@@ -4,7 +4,6 @@ const timerLabel = document.querySelector('.timer-label')
 const timers = document.querySelectorAll('.timer')
 const timerCheckbox = document.querySelector('.timer__switch input')
 
-// const volumeContainer = document.querySelector('.settings__volume')
 const volumeInput = document.querySelector('.volume-input')
 const volumeLabel = document.querySelector('.volume-label')
 let volumeValue;
@@ -21,7 +20,7 @@ toggleButton.addEventListener('click', e => {
 
 timerInput.addEventListener('change', (e) => {
     timerStep = parseInt(e.target.value, 10);
-    timerLabel.innerHTML = `${timerStep} с`
+    timerLabel.innerHTML = `${timerStep}`
 })
 
 export function runTimer() {
