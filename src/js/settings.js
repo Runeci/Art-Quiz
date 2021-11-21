@@ -156,8 +156,8 @@ function checkState() {
     }
 
     if (!localStorage.getItem('volume')) {
-        volumeValue = 0.5
-        volumeInput.value = 0.5 * 100
+        volumeValue = 50
+        volumeInput.value = 50
         volumeLabel.innerHTML = `${volumeValue}`
     } else {
         volumeValue = localStorage.getItem('volume')
