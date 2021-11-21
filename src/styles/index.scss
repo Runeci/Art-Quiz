@@ -1,7 +1,6 @@
 @import '~normalize.css';
 
 // FONTS
-@import './fonts.scss';
 
 
 //RESET
@@ -184,13 +183,9 @@ input[type=range]::-moz-range-thumb {
 // FILES
 
 @import 'components/main';
-@import "components/artist";
-@import "components/artist_quiz";
-@import "components/artist_result";
-
-@import "components/arts_quiz";
-
-
+@import "components/category";
+@import "components/quiz";
+@import "components/results";
 @import "components/settings";
 
 

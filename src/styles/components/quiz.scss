@@ -42,7 +42,6 @@
   margin-bottom: 20px;
 }
 
-
 .arts-quiz__answers,
 .artist-quiz__answers {
   display: flex;
@@ -51,14 +50,10 @@
   justify-content: center;
 }
 
-
-
 .arts-quiz__questions-number,
 .artist-quiz__questions-number {
   margin-bottom: 20px;
 }
-
-
 
 .artist-quiz__answer {
   min-width: 150px;
@@ -116,16 +111,13 @@
   border: 2px solid lightgreen;
 }
 
-
 .artist-quiz__answer.wrong {
   border: 2px solid red;
 }
 
-
 .disabled {
   pointer-events: none;
 }
-
 
 .modal,
 .arts-modal,
@@ -216,4 +208,62 @@
 .arts-quiz__question-number.wrong,
 .artist-quiz__question-number.wrong {
   border: 1px solid $accent-color;
+}
+
+
+.art-quiz__question {
+  margin-bottom: 20px;
+}
+.arts-quiz__answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.arts-quiz__answer {
+  max-width: 250px;
+  min-width: 180px;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 560px) {
+  .arts-quiz__answers {
+    gap: 10px;
+  }
+  .arts-quiz__answer {
+    max-width: 150px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 400px) {
+  .arts-quiz__answer {
+    max-width: 300px;
+    height: 100px;
+  }
+}
+
+.arts-right-answer {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.arts-quiz__answer.correct {
+  border: 1px solid lightgreen;
+}
+
+.arts-quiz__answer.wrong {
+  border: 1px solid red;
+}
+
+.modal-arts-content {
+  padding: 20px;
 }
