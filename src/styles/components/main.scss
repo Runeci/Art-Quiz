@@ -54,7 +54,7 @@
   justify-content: center;
   flex-direction: column;
   color: white;
-  gap: 20px;
+  gap: 35px;
 }
 
 .main__settings-btn {
@@ -89,6 +89,16 @@
   svg {
     -webkit-animation: rotation 5s infinite linear;
     fill: black;
+  }
+}
+
+.button-pulse {
+  animation: pulse 5s infinite 3s cubic-bezier(0.1, 0, 0, 1);
+  box-shadow: 0 0 0 0 white;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
   }
 }
 
