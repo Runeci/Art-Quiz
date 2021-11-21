@@ -55,19 +55,19 @@ export function stopTimer() {
 //MUSIC
 
 export function playCorrectAudio() {
-    let audio = new Audio('./../assets/sounds/correct-answer-sound.mp3')
+    let audio = new Audio('./assets/sounds/correct-answer-sound.mp3')
     audio.volume = parseInt(volumeValue, 10) / 100
     audio.play()
 }
 
 export function playWrongAudio() {
-    let audio = new Audio('./../assets/sounds/wrong-answer-sound.mp3')
+    let audio = new Audio('./assets/sounds/wrong-answer-sound.mp3')
     audio.volume = parseInt(volumeValue, 10) / 100
     audio.play()
 }
 
 export function playWinAudio() {
-    let audio = new Audio('./../assets/sounds/win.mp3')
+    let audio = new Audio('./assets/sounds/win.mp3')
     audio.volume = parseInt(volumeValue, 10) / 100
     audio.play()
 }
