@@ -12,7 +12,7 @@
           rel="stylesheet">
     <title>Art Quiz</title>
 </head>
-<body class="wrapper background-img english">
+<body class="wrapper background-img">
 
 <main class="container">
     <!--MAIN-->
@@ -56,14 +56,14 @@
             </div>
         </div>
         <div class="main__buttons">
-            <div class="main__artist-btn button-main">Художники</div>
+            <div class="main__artist-btn button-main artists-language">Художники</div>
             <div class="main__art-btn button-main">Картины</div>
             <div class="main__settings-btn button-main">
                 <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M42.6042 20.7411H41.0525C40.6169 17.379 39.2966 14.2892 37.3093 11.7302L38.4119 10.6276C39.3511 9.68844 39.3511 8.16394 38.4119 7.22474C37.4727 6.28554 35.9482 6.28554 35.009 7.22474L33.9064 8.32728C31.3611 6.3536 28.2712 5.01966 24.9092 4.58409V3.03236C24.9092 1.71204 23.8339 0.636719 22.4999 0.636719C21.166 0.636719 20.1043 1.71204 20.1043 3.03236V4.58409C16.7422 5.01966 13.6524 6.33999 11.0934 8.32728L9.9909 7.22474C9.0517 6.28554 7.5272 6.28554 6.588 7.22474C5.6488 8.16394 5.6488 9.68844 6.588 10.6276L7.69054 11.7302C5.71686 14.2892 4.38293 17.3654 3.94736 20.7411H2.39564C1.07531 20.7411 0 21.8164 0 23.1367C0 24.457 1.07531 25.5324 2.39564 25.5324H3.94736C4.38293 28.8944 5.70325 31.9843 7.69054 34.5433L6.588 35.6458C5.6488 36.585 5.6488 38.1095 6.588 39.0487C7.5272 39.9879 9.0517 39.9879 9.9909 39.0487L11.0934 37.9462C13.6524 39.9198 16.7422 41.2538 20.1043 41.6894V43.2411C20.1043 44.5614 21.1796 45.6367 22.4999 45.6367C23.8203 45.6367 24.9092 44.575 24.9092 43.2411V41.6894C28.2712 41.2538 31.3611 39.9335 33.92 37.9462L35.0226 39.0487C35.9618 39.9879 37.4863 39.9879 38.4255 39.0487C39.3647 38.1095 39.3647 36.585 38.4255 35.6458L37.3229 34.5433C39.2966 31.9843 40.6306 28.8944 41.0661 25.5324H42.6042C43.9246 25.5324 44.9999 24.457 44.9999 23.1367C45.0135 21.8164 43.9382 20.7411 42.6042 20.7411ZM22.4999 36.8708C14.9183 36.8708 8.77947 30.732 8.77947 23.1503C8.77947 15.5687 14.9183 9.42982 22.4999 9.42982C30.0816 9.42982 36.2204 15.5687 36.2204 23.1503C36.234 30.7184 30.0816 36.8708 22.4999 36.8708Z"/>
                     <path d="M22.4999 29.48C26.0031 29.48 28.8429 26.6401 28.8429 23.137C28.8429 19.6338 26.0031 16.7939 22.4999 16.7939C18.9968 16.7939 16.1569 19.6338 16.1569 23.137C16.1569 26.6401 18.9968 29.48 22.4999 29.48Z"/>
                 </svg>
-                <span>Настройки</span>
+                <span class="settings-language">Настройки</span>
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@
                         <circle cx="31" cy="31" r="30.5" stroke="#E85A4F"/>
                         <circle cx="62" cy="31" r="30.5" stroke="#E85A4F"/>
                     </svg>
-                    <h2>Категории</h2>
+                    <h2 class="category-language">Категории</h2>
                 </div>
                 <div class="button-home button button-home-artist">Домой</div>
             </div>
@@ -97,10 +97,10 @@
                     <circle cx="31" cy="31" r="30.5" stroke="#E85A4F"/>
                     <circle cx="62" cy="31" r="30.5" stroke="#E85A4F"/>
                 </svg>
-                <h2>Вопросы</h2>
+                <h2 class="question-language">Вопросы</h2>
             </div>
             <div class="buttons-category">
-                <div class="button-category-artist button">Категории</div>
+                <div class="button-category-artist button category-language">Категории</div>
                 <div class="button button-home">Домой</div>
             </div>
         </div>
@@ -109,13 +109,13 @@
             <div class="modal-results" id="modalResults">
                 <div class="modal-results__content modal-content">
                     <div class="modal-results__score"></div>
-                    <button class="modal-results__next button">продолжить</button>
+                    <button class="modal-results__next button continue-language">продолжить</button>
                 </div>
             </div>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <p class="modal-inner-text"></p>
-                    <button class="artist-quiz__next">продолжить</button>
+                    <button class="artist-quiz__next continue-language">продолжить</button>
                 </div>
             </div>
             <div class="artist-quiz__question">Кто автор картины?</div>
@@ -144,17 +144,17 @@
     <!--    RESULTS ARTISTS-->
     <div class="artists-results invisible content" id="artists-results" data-visible="artists-results">
         <div class="artist-result__header category-header">
-            <div class="artist-result__logo logo">
+            <div class="artist-result__logo logo ">
                 <svg width="166" height="62" viewBox="0 0 166 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M35.1083 45L33.3443 39.708H21.6263L19.8623 45H13.6043L23.8943 15.6H31.0763L41.4083 45H35.1083ZM23.4743 34.29H31.5383L27.5063 22.278L23.4743 34.29ZM48.5147 27.612C49.0187 26.268 49.8447 25.26 50.9927 24.588C52.1687 23.916 53.4707 23.58 54.8987 23.58V29.628C53.2467 29.432 51.7627 29.768 50.4467 30.636C49.1587 31.504 48.5147 32.946 48.5147 34.962V45H43.0967V24H48.5147V27.612ZM69.7394 29.208H64.9934V37.944C64.9934 38.672 65.1754 39.204 65.5394 39.54C65.9034 39.876 66.4354 40.072 67.1354 40.128C67.8354 40.156 68.7034 40.142 69.7394 40.086V45C66.0154 45.42 63.3834 45.07 61.8434 43.95C60.3314 42.83 59.5754 40.828 59.5754 37.944V29.208H55.9214V24H59.5754V19.758L64.9934 18.12V24H69.7394V29.208ZM112.001 30.3C112.001 34.108 110.797 37.412 108.389 40.212L111.413 43.362L107.297 47.016L104.105 43.698C101.837 44.958 99.3729 45.588 96.7129 45.588C92.4849 45.588 88.8869 44.118 85.9189 41.178C82.9509 38.21 81.4669 34.584 81.4669 30.3C81.4669 26.016 82.9509 22.404 85.9189 19.464C88.8869 16.496 92.4849 15.012 96.7129 15.012C100.941 15.012 104.539 16.496 107.507 19.464C110.503 22.404 112.001 26.016 112.001 30.3ZM96.7129 39.918C97.8049 39.918 98.8969 39.736 99.9889 39.372L95.1589 34.332L99.2749 30.678L104.441 36.054C105.617 34.374 106.205 32.456 106.205 30.3C106.205 27.5 105.295 25.19 103.475 23.37C101.655 21.55 99.4009 20.64 96.7129 20.64C94.0249 20.64 91.7709 21.55 89.9509 23.37C88.1309 25.19 87.2209 27.5 87.2209 30.3C87.2209 33.072 88.1309 35.368 89.9509 37.188C91.7709 39.008 94.0249 39.918 96.7129 39.918ZM129.178 24H134.596V45H129.178V42.648C127.862 44.608 125.776 45.588 122.92 45.588C120.624 45.588 118.72 44.818 117.208 43.278C115.724 41.738 114.982 39.61 114.982 36.894V24H120.4V36.222C120.4 37.622 120.778 38.7 121.534 39.456C122.29 40.184 123.298 40.548 124.558 40.548C125.958 40.548 127.078 40.114 127.918 39.246C128.758 38.378 129.178 37.076 129.178 35.34V24ZM141.332 21.48C140.436 21.48 139.652 21.158 138.98 20.514C138.336 19.842 138.014 19.058 138.014 18.162C138.014 17.266 138.336 16.482 138.98 15.81C139.652 15.138 140.436 14.802 141.332 14.802C142.256 14.802 143.04 15.138 143.684 15.81C144.356 16.482 144.692 17.266 144.692 18.162C144.692 19.058 144.356 19.842 143.684 20.514C143.04 21.158 142.256 21.48 141.332 21.48ZM138.644 45V24H144.062V45H138.644ZM154.701 39.918H164.025V45H147.435V41.388L156.297 29.082H147.855V24H163.605V27.612L154.701 39.918Z"
                           fill="#E85A4F"/>
                     <circle cx="31" cy="31" r="30.5" stroke="#E85A4F"/>
                     <circle cx="62" cy="31" r="30.5" stroke="#E85A4F"/>
                 </svg>
-                <h2>Результаты</h2>
+                <h2 class="result-language">Результаты</h2>
             </div>
             <div class="artist-buttons-results">
-                <div class="button-category-artist-res  button">Категории</div>
+                <div class="button-category-artist-res category-language button">Категории</div>
                 <div class="button-home-artist-res button-home button">Домой</div>
             </div>
         </div>
@@ -178,7 +178,7 @@
                         <circle cx="31" cy="31" r="30.5" stroke="#E85A4F"/>
                         <circle cx="62" cy="31" r="30.5" stroke="#E85A4F"/>
                     </svg>
-                    <h2>Категории</h2>
+                    <h2 class="category-language">Категории</h2>
                 </div>
                 <div class="button-home button">Домой</div>
             </div>
@@ -196,10 +196,10 @@
                     <circle cx="31" cy="31" r="30.5" stroke="#E85A4F"/>
                     <circle cx="62" cy="31" r="30.5" stroke="#E85A4F"/>
                 </svg>
-                <h2>Вопросы</h2>
+                <h2 class="question-language">Вопросы</h2>
             </div>
             <div class="buttons-category">
-                <div class="button-category-arts button">Категории</div>
+                <div class="button-category-arts button category-language">Категории</div>
                 <div class="button button-home-arts button-home">Домой</div>
             </div>
         </div>
@@ -208,14 +208,14 @@
             <div class="modal-results-arts modal">
                 <div class="modal-results-arts__content modal-content">
                     <div class="modal-results-arts__score"></div>
-                    <button class="modal-results-arts__next button">продолжить</button>
+                    <button class="modal-results-arts__next button continue-language">продолжить</button>
                 </div>
             </div>
             <div class="arts-modal modal">
                 <div class="modal-arts-content">
                     <p class="modal-arts-inner-text">Правильный ответ: </p>
                     <div class="arts-right-answer"></div>
-                    <button class="arts-quiz__next button">продолжить</button>
+                    <button class="arts-quiz__next button continue-language">продолжить</button>
                 </div>
             </div>
             <div class="arts-quiz__question"><div class="question">Какую картину написал(а)</div><div class="name"></div></div>
@@ -250,10 +250,10 @@
                     <circle cx="31" cy="31" r="30.5" stroke="#E85A4F"/>
                     <circle cx="62" cy="31" r="30.5" stroke="#E85A4F"/>
                 </svg>
-                <h2>Результаты</h2>
+                <h2 class="result-language">Результаты</h2>
             </div>
             <div class="arts-buttons-results">
-                <div class="button-category-arts-res button">Категории</div>
+                <div class="button-category-arts-res button category-language">Категории</div>
                 <div class="button-home-arts-res button-home button">Домой</div>
             </div>
         </div>
@@ -277,7 +277,7 @@
                     <circle cx="31" cy="31" r="30.5" stroke="#E85A4F"/>
                     <circle cx="62" cy="31" r="30.5" stroke="#E85A4F"/>
                 </svg>
-                <h2>Настройки</h2>
+                <h2 class="settings-language">Настройки</h2>
             </div>
             <div class="button-home button">Домой</div>
         </div>
@@ -314,6 +314,15 @@
             <div class="settings__theme">
                 <div class="theme__title">Светлая тема</div>
                 <div class="theme__switch ">
+                    <label class="switch">
+                        <input type="checkbox" class="toggle" data-switch="off">
+                        <span class="slider round" data-switch="off"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="settings__language">
+                <div class="language__title">Английский язык</div>
+                <div class="language__switch ">
                     <label class="switch">
                         <input type="checkbox" class="toggle" data-switch="off">
                         <span class="slider round" data-switch="off"></span>

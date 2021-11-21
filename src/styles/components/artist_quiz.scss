@@ -113,8 +113,9 @@
 }
 
 .artist-quiz__answer.correct {
-  border: 2px solid $accent-color;
+  border: 2px solid lightgreen;
 }
+
 
 .artist-quiz__answer.wrong {
   border: 2px solid red;
@@ -164,6 +165,7 @@
   border: 1px solid #888;
   max-width: 500px;
   width: 100%;
+  color: black;
 }
 
 .modal-inner-text {

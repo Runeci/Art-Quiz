@@ -89,49 +89,49 @@ themeBtn.addEventListener('click', () => {
 
 //LANGUAGE
 
+const languageBtn = document.querySelector('.settings__language .toggle');
+
+languageBtn.addEventListener('click', () => {
+    body.classList.toggle('english');
+    changeLanguage();
+})
+
 function changeLanguage() {
+
     if (body.classList.contains('english')) {
-        document.querySelector('.main__artist-btn').innerHTML = 'Artists'
+        document.querySelector('.artists-language').innerHTML = 'Artists'
         document.querySelector('.main__art-btn').innerHTML = 'Arts'
-        document.querySelector('.main__settings-btn span').innerHTML = 'Settings'
-        document.querySelector('.artist-category__logo h2').innerHTML = 'Artists'
-        document.querySelector('.main__artist-btn').innerHTML = 'Categories'
-
-        document.querySelectorAll('.button-home').forEach(btn => btn.innerHTML = 'Home')
-
-        document.querySelector('.artist-quiz__logo h2').innerHTML = 'Questions'
-        document.querySelector('.button-category-artist').innerHTML = 'Categories'
-
-
-        document.querySelector('.modal-results__next').innerHTML = 'continue'
-        document.querySelector('.artist-quiz__next').innerHTML = 'continue'
-
+        document.querySelectorAll('.settings-language').forEach(i => i.innerHTML = 'Settings');
+        document.querySelectorAll('.category-language').forEach(i => i.innerHTML = 'Categories');
+        document.querySelectorAll('.button-home').forEach(btn => btn.innerHTML = 'Home');
+        document.querySelectorAll('.question-language').forEach(i => i.innerHTML = 'Questions');
         document.querySelector('.artist-quiz__question').innerHTML = 'Who is the author?'
-        document.querySelector('.artist-result__logo h2').innerHTML = 'Results'
-        document.querySelector('.button-category-artist-res').innerHTML = 'Categories'
-
-
-        document.querySelector('.arts-category__logo h2').innerHTML = 'Categories'
-        document.querySelector('.arts-quiz__logo h2').innerHTML = 'Questions'
-        document.querySelector('.button-category-arts').innerHTML = 'Categories'
-        document.querySelector('.modal-results-arts__next').innerHTML = 'continue'
+        document.querySelectorAll('.result-language').forEach(i => i.innerHTML = 'Results')
         document.querySelector('.arts-quiz__question .question').innerHTML = 'What art is of'
-
-
         document.querySelector('.modal-arts-inner-text').innerHTML = 'Right answer:'
-        document.querySelector('.arts-quiz__next').innerHTML = 'continue'
-        document.querySelector('.arts-result__logo h2').innerHTML = 'Results'
-        document.querySelector('.button-category-arts-res').innerHTML = 'Categories'
-
-        document.querySelector('.settings__logo h2').innerHTML = 'Settings'
-        document.querySelector('.button-category-arts-res').innerHTML = 'Categories'
-
+        document.querySelectorAll('.continue-language').forEach(i => i.innerHTML = 'continue')
         document.querySelector('.volume__title').innerHTML = 'Volume'
         document.querySelector('.timer__title').innerHTML = 'Timer'
         document.querySelector('.theme__title').innerHTML = 'Light mode'
-
+        document.querySelector('.language__title').innerHTML = 'English'
         document.querySelector('.author').innerHTML = 'Daryia Kastsianok'
-
+    } else {
+        document.querySelector('.artists-language').innerHTML = 'Художники'
+        document.querySelector('.main__art-btn').innerHTML = 'Картины'
+        document.querySelectorAll('.settings-language').forEach(i => i.innerHTML = 'Настройки');
+        document.querySelectorAll('.category-language').forEach(i => i.innerHTML = 'Категории');
+        document.querySelectorAll('.button-home').forEach(btn => btn.innerHTML = 'Домой');
+        document.querySelectorAll('.question-language').forEach(i => i.innerHTML = 'Вопросы');
+        document.querySelector('.artist-quiz__question').innerHTML = 'Кто автор картины?'
+        document.querySelectorAll('.result-language').forEach(i => i.innerHTML = 'Результаты')
+        document.querySelector('.arts-quiz__question .question').innerHTML = 'Какую картину написал(а)'
+        document.querySelector('.modal-arts-inner-text').innerHTML = 'Правильный ответ:'
+        document.querySelectorAll('.continue-language').forEach(i => i.innerHTML = 'продолжить')
+        document.querySelector('.volume__title').innerHTML = 'Громкость'
+        document.querySelector('.timer__title').innerHTML = 'Таймер'
+        document.querySelector('.theme__title').innerHTML = 'Светлая тема'
+        document.querySelector('.language__title').innerHTML = 'Английский язык'
+        document.querySelector('.author').innerHTML = 'Дария Костенок'
     }
 }
 changeLanguage()
@@ -170,6 +170,13 @@ function checkState() {
         body.classList.add('light')
         document.querySelector('.theme__switch input').setAttribute('checked', 'checked')
     }
+
+    if (localStorage.getItem('english') === 'true') {
+        body.classList.add('english')
+        document.querySelector('.language__switch input').setAttribute('checked', 'checked')
+        changeLanguage()
+    }
+
 }
 
 checkState()
@@ -177,7 +184,8 @@ checkState()
 
 window.addEventListener('beforeunload', () => {
     localStorage.setItem('timer', `${timerCheckbox.getAttribute('data-switch')}`);
-    localStorage.setItem('timer-period', `${timerStep}`)
-    localStorage.setItem('volume', `${volumeValue}`)
-    localStorage.setItem('theme-light', `${body.classList.contains('light')}`)
+    localStorage.setItem('timer-period', `${timerStep}`);
+    localStorage.setItem('volume', `${volumeValue}`);
+    localStorage.setItem('theme-light', `${body.classList.contains('light')}`);
+    localStorage.setItem('english', `${body.classList.contains('english')}`)
 })
